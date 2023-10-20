@@ -9,7 +9,40 @@
     <form action="form3.html" target="_blank">
         <fieldset>
             <legend>Preferencias</legend>
-        <input>
+        <select multiple name="velocidad">
+            <option value="100_mbits">100 Mbits</option>
+            <option value="1000_mbits">1000 Mbits</option>
+        </select><br>
+        <label for="">DNI</label>
+        <input type="text" name="dni"><br>
+        <label for="">Nombre</label>
+        <input type="text" name="mombre"><br>
+        <label for="">Apellidos</label>
+        <input type="text" name="apellidos"><br>
+        <label for="">Email:</label>
+        <input type="email" name="email" id=""><br>
+        <br>
+        <label for="">Elija un color:</label>
+        <input type="color" name="color" id=""><br>
+        <input type="checkbox" name="procesador" value="procesadoramd">AMD<br>
+        <input type="checkbox" name="procesador" value="procesadorintel_i5">Intel 5<br>
+        <input type="checkbox" name="procesador" value="procesadorintel_i5">Intel 7<br>
+        <label for="">Elija una hora:</label>
+        <input type="time" name="hora" id=""><br>
+        <input type="radio" name="red" value="red2g">2G<br>
+        <input type="radio" name="red" value="red3g">3G<br>
+        <input type="radio" name="red" value="red4g">4G<br>
+        <label for="">Elija un fichero:</label>
+        <input type="file" name="fichero1" id=""><br>
+        <input type="checkbox" name="asignatura" value="asignaturahistoria">Historia<br>
+        <input type="checkbox" name="asignatura" value="asignaturageografia">Geografía<br>
+        <input type="checkbox" name="asignatura" value="asignaturalengua">Lengua<br>
+        <input type="checkbox" name="asignatura" value="asignaturamatematicas">Matemáticas<br>
+        <label for="">Elija una hora:</label>
+        <input type="time" name="hora" id=""><br>
+        <label for="">Elija un fichero:</label>
+        <input type="file" name="fichero2" id=""><br>
+        <textarea name="" rows="8" cols="49">Utilice este cuadro para escribir.</textarea>
         </fieldset>
     </form>
 </body>
