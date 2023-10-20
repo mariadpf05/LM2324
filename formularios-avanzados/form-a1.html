@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO DE PAGO</title>
+</head>
+<body>
+    <form action="form-a1.html">
+        <fieldset>
+            <p><b>FORMULARIO DE PAGO</b> (los campos obligatorios se han marcado con <b>*</b>)</p>
+            <fieldset>
+                <legend>Profesión</legend>
+                <input type="radio" name="profesion" value="profesor/a">Profesor/a<br>
+                <input type="radio" name="profesion" value="estudiante">Estudiante<br>
+                <input type="radio" name="profesion" value="otro1">Otro<br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Tratamiento</legend>
+                <input type="radio" name="profesion" value="sr/sra">Sr/Sra<br>
+                <input type="radio" name="profesion" value="dr/dra">Dr/Dra<br>
+                <input type="radio" name="profesion" value="otro2">Otro<br>
+            </fieldset>
+            <br>
+            <label for="">Nombre:<b>*</b></label><br>
+            <input type="text" name="nombre" value="" required><br>
+            <label for="">Correo:<b>*</b></label><br>
+            <input type="email" name="email" value="" required><br>
+            <label for="">Teléfono<b>*</b></label><br>
+            <input type="text" name="telefono" value="" required><br>
+            <label for="">Contraseña:<b>*</b></label><br>
+            <input type="password" name="contraseña" value="" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Información de pago</legend>
+            <select name="tipodetarjeta">
+                <label for="">Tipo de tarjeta
+                    <option value="visa">VISA</option>
+                    <option value="mc">MasterCard</option>
+                    <option value="amex">American Express</option>
+                </label>
+            </select>
+    </form>
+    
+</body>
+</html>
