@@ -8,18 +8,38 @@
 <body>
     <p>Rellenar</p>
     <form action="form1.html" target="_blank">
+        <fieldset>
+            <legend>Registrarse</legend>
+        <input type="radio" name="idioma" value="idiomaingles">Inglés<br>
+        <input type="radio" name="idioma" value="idiomaaleman">Alemán<br>
+        <input type="radio" name="idioma" value="idiomafrances">Francés<br>
         <p>
-            <input type="radio" id="Idioma1" name="Inglés" value="Idioma1">
-            <label for="">Inglés</label>
+            <select name="conector">
+                <option value="usb" selected>USB</option>
+                <option value="paralelo">Paralelo</option>
+                <option value="ps2">PS2</option>
+            </select>
         </p>
         <p>
-            <input type="radio" id="Idioma2" name="Alemán" value="Idioma2">
-            <label for="">Alemán</label>
+            <label for="">Nombre</label>
+            <input type="text" name="mombre"><br>
+            <label for="">Apellidos</label>
+            <input type="text" name="apellidos"><br>
         </p>
+        </fieldset>
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+        <select multiple name="sexo">
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+        </select><br>
+        <input type="checkbox" name="sexomujer" value="mujer" id="">Mujer<br>
+        <input type="checkbox" name="sexohombre" value="hombre" id="">Hombre<br>
         <p>
-            <input type="radio" id="Idioma3" name="Francés" value="Idioma3">
-            <label for="">Francés</label>
+        <label for="">Elija una fecha:</label>
+        <input type="date" name="nacimiento" id="">
         </p>
+        </fieldset>
     </form>
 </body>
 </html>
