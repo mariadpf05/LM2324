@@ -1,0 +1,79 @@
+/*Hoja de estilos del ej1 css flexbox modelo examen*/
+body {
+    font-family: 'Trebuchet MS', 'Geneva', 'sans-serif';
+    background: url('bg.jpg') no-repeat center center fixed; 
+    /*
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: center;
+    background-attachment: fixed;
+    */
+    background-size: cover; /*Para que cubra toda la pantalla*/
+}
+p::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: #4c3803;
+}
+header { /*Estilo encabezado*/
+    background-color: #b28306;
+    color: #4c3803;
+    text-align: center;
+    border-radius: 20px;
+    border-bottom: 1px solid;
+    padding: 1rem; 
+}
+aside{ /*Estilo del lateral*/
+    background-color: #b28306;
+    color: #4c3803;
+    border-radius: 20px;
+}
+nav { /*Estilo barra de navegación*/
+    display: flex;
+    background-color: #ebcd7c;
+    border-radius: 20px;
+    padding: 5px 0px;
+}
+nav a { /*Estilo para los enlaces dentro de la barra de navegación*/
+    flex: auto;
+    text-align: center;
+    background-color: #4c3803;
+    color: #b28306;
+    margin: 0 5px; /*margen arriba-abajo y margen laterales*/
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 5px 0px;
+}
+nav a:hover{
+    outline: 1px solid white;
+    color: white;
+    text-decoration:none;
+}
+a{
+    color: gray;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*A partir de aqui vamos a cambiar la disposición de los elemetos cuendo el tamaño de la pantalla sea superior a 480px*/
+@media screen and (min-width: 480px){
+    body{
+        display: flex;
+        flex-direction: column;
+        max-width: 75%;
+        margin: auto;
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 0.5rem solid;
+    }
+    nav, header {
+        order: -1;
+    }
+    article {
+        flex: 75%;
+    }
+    aside {
+        flex: 25%;
+    }
+}
