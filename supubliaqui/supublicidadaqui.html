@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prensa digital</title>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            #banner {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                z-index: 10;
+            }
+
+            #contenido {
+                display: flex;
+                margin-top: 100px;
+                /* Ajustar según la altura del banner */
+            }
+
+            .publicidad {
+                position: fixed;
+                width: 15%;
+                /* Ajustar según el tamaño deseado */
+                height: 100%;
+                background-color: lightblue;
+                text-align: center;
+                align-items: center;
+                /* Alineación vertical */
+                justify-content: center;
+                /* Alineación horizontal */
+            }
+
+            #publicidadIzquierda {
+                left: 0;
+            }
+
+            #publicidadDerecha {
+                right: 0;
+            }
+
+            #texto {
+                margin: 0 auto;
+                padding: 20px;
+                width: 60%;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="banner">
+            <img src="banner.png" alt="banner">
+        </header>
+        <div id="contenido">
+            <div id="publicidadIzquierda" class="publicidad">Publicidad Izquierda
+        </div>
+            <div id="texto">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum neque vel pulvinar auctor. Praesent egestas massa et pulvinar sodales. Sed vel iaculis elit, ac convallis turpis. Aenean in augue vel purus egestas tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget dolor eu ligula malesuada iaculis in vel erat. Integer sagittis elit vitae nisl sagittis, eget consequat lorem posuere. Phasellus tempor dui ac maximus molestie. Duis non consequat neque.    </p>
+                <p>Proin ut commodo dolor. Etiam ut malesuada magna. Aliquam cursus faucibus turpis, at posuere tortor dictum ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse eu nibh nec leo imperdiet viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam eu efficitur mi. Aliquam euismod massa eu velit porta, nec commodo magna dapibus. Fusce fringilla vestibulum magna eu gravida.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+                <p>Phasellus dapibus sodales neque, et consectetur massa tempor vel. Suspendisse interdum tellus turpis, vitae consectetur erat facilisis ac. Nam consequat rhoncus urna. Etiam consequat, ex sed iaculis mollis, quam felis lobortis nulla, nec fringilla magna lacus sed ipsum. Morbi ac lobortis sapien. Duis ornare id purus a mattis. Vivamus accumsan, eros eget consequat gravida, ligula sem porta purus, ac malesuada quam tellus ut neque. Morbi consectetur, justo porttitor faucibus consectetur, sem leo ornare turpis, ut rutrum diam neque eu lorem. Duis vulputate augue non laoreet ullamcorper. Nulla tellus risus, vehicula id metus non, convallis hendrerit sapien. Nullam lectus eros, efficitur vel aliquam a, hendrerit lobortis nisl.</p>
+            </div>
+            <div id="publicidadDerecha" class="publicidad">Publicidad Derecha
+        </div>
+        </div>
+    </body>
+</html>
