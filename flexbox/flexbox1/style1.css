@@ -65,7 +65,7 @@ a{
     main {
         display: flex;
         flex-wrap: wrap;
-        border-bottom: 0.5rem solid;
+        border-bottom: 0.5rem solid black;
     }
     nav, header {
         order: -1;
