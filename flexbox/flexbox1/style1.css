@@ -65,6 +65,7 @@ a{
     main {
         display: flex;
         flex-wrap: wrap;
+        box-sizing: border-box;
         border-bottom: 0.5rem solid black;
     }
     nav, header {
