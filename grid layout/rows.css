@@ -14,6 +14,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto;
+    justify-content: stretch;
   }
 
 .caja{
@@ -22,7 +23,6 @@ body {
     padding: 20px;
     font-size: 30px;
     text-align: center;
-    line-height: 150px;
 }
 .cajaazul{
     grid-column: 1;
@@ -52,7 +52,9 @@ body {
     text-align: center;
     line-height: 150px;
 }
-.caja11{
+.caja10{
+    grid-column: 3;
+    grid-row: 3/ span 2;
     background-color: lightgray;
     border: 4px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
