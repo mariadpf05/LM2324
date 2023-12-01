@@ -10,7 +10,7 @@ body {
     padding: 20px;
     margin: 0 auto;
     width: 80%;
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 1px solid black;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto;
@@ -19,7 +19,7 @@ body {
 
 .caja{
     background-color: lightgray;
-    border: 4px solid rgba(0, 0, 0, 0.8);
+    border: 4px solid black;
     padding: 20px;
     font-size: 30px;
     text-align: center;
@@ -29,7 +29,7 @@ body {
     grid-column: 1 / span 3;
     grid-row: 1;
     background-color: lightblue;
-    border: 4px solid rgba(0, 0, 0, 0.8);
+    border: 4px solid black;
     padding: 20px;
     font-size: 30px;
     text-align: center;
@@ -39,7 +39,7 @@ body {
     grid-column: 1 / span 2;
     grid-row: 2;
     background-color: lightyellow;
-    border: 4px solid rgba(0, 0, 0, 0.8);
+    border: 4px solid black;
     padding: 20px;
     font-size: 30px;
     text-align: center;
@@ -47,7 +47,7 @@ body {
 }
 .cajaroja{
     background-color: lightsalmon;
-    border: 4px solid rgba(0, 0, 0, 0.8);
+    border: 4px solid black;
     padding: 20px;
     font-size: 30px;
     text-align: center;
@@ -57,7 +57,7 @@ body {
     grid-column: 2 / span 2;
     grid-row: 5;
     background-color: lightgray;
-    border: 4px solid rgba(0, 0, 0, 0.8);
+    border: 4px solid black;
     padding: 20px;
     font-size: 30px;
     text-align: center;
@@ -67,7 +67,7 @@ body {
     grid-column: 1 / span 3;
     grid-row: 6;
     background-color: lightseagreen;
-    border: 4px solid rgba(0, 0, 0, 0.8);
+    border: 4px solid black;
     padding: 20px;
     font-size: 30px;
     text-align: center;
