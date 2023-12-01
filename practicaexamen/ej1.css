@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 html {
     background-color: #970043;
@@ -11,7 +11,6 @@ body{
 p::first-letter {
     font-size: 1rem;
     font-weight: bold;
-    color:black;
 }
 header, footer {
     background-color: #ffd100;
@@ -21,24 +20,31 @@ header {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-/*
 main {
-    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
 }
-*/
+
 .imgcentro {
     border-radius: 10px;
     max-width: 100%;
 
 }
 .izquierda{
-
 }
 .derecha{
-
 }
 article, aside, footer, header {
     box-sizing: border-box; 
+}
+.email {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+.ayuntamiento{
+    color: #ffd100;
+    text-decoration: none;
 }
 footer{
     border-bottom-left-radius: 20px;
