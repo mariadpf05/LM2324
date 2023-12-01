@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+html {
+    background-color: #970043;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    background-size: cover;
+}
+body{
+    margin: 0px;
+}
+p::first-letter {
+    font-size: 1rem;
+    font-weight: bold;
+    color:black;
+}
+header, footer {
+    background-color: #ffd100;
+    text-align: center;
+}
+header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/*
+main {
+    background-color: #f2f2f2;
+}
+*/
+.imgcentro {
+    border-radius: 10px;
+    max-width: 100%;
+
+}
+.izquierda{
+
+}
+.derecha{
+
+}
+article, aside, footer, header {
+    box-sizing: border-box; 
+}
+footer{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+    
+  }
