@@ -23,50 +23,26 @@ body {
     padding: 20px;
     font-size: 30px;
     text-align: center;
+    line-height: 150px;
 }
 .cajaazul{
     grid-column: 1;
     grid-row: 1 / span 2;
     background-color: lightblue;
-    border: 4px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
 }
 .cajaamarilla {
     grid-column: 2;
     grid-row: 1 / span 2;
     background-color: lightyellow;
-    border: 4px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
 }
 .cajaroja{
     background-color: lightsalmon;
-    border: 4px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
 }
 .caja10{
     grid-column: 3;
     grid-row: 3/ span 2;
     background-color: lightgray;
-    border: 4px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
 }
 .cajaverde{
     background-color: lightseagreen;
-    border: 4px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
 }
