@@ -1,17 +1,12 @@
 html, body{
     overflow: hidden;
     height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-div{
-    box-sizing: border-box;
-    text-align: center;
+    margin: 0%;
+    padding: 0%;
     color: white;
-    font-size: 30px;
+    font-size: xx-large;
 }
-.principal
-{
+.principal {
     border: 5px solid red;
     box-sizing: border-box;
     width: 100%;
@@ -19,40 +14,33 @@ div{
     flex-wrap: nowrap;
     height: 100vh;
     flex-direction: column;
-    justify-content: space-between;
 }
 .principal > div
 {
-    font-size: 6px;
+    text-align: center;
+    min-height: 25%;
 }
-.caja1 {
+.principal div:nth-of-type(1) {
     background-color: green;
+    flex-grow: 3;
 }
-.caja2 {
+.principal div:nth-of-type(2) {
     background-color: deepskyblue;
+    flex-grow: 3;
 }
-.caja3 {
+.principal div:nth-of-type(3) {
     background-color: purple;
+    flex-grow: 4;
 }
-.caja4 {
+.principal div:nth-of-type(4) {
     background-color: darkslategrey;
+    flex-grow: 1;
 }
-.caja5 {
+.principal div:nth-of-type(5) {
     background-color: yellow;
+    flex-grow: 6;
 }
-.caja6 {
+.principal div:nth-of-type(6){
     background-color: orange;
-}
-
-.caja7 {
-    background-color: red;
-}
-.caja8 {
-    background-color: grey;
-}
-.caja9 {
-    background-color: greenyellow;
-}
-.caja10 {
-    background-color: darkgreen;
+    flex-grow: 6;
 }
