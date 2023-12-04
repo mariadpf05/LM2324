@@ -1,21 +1,17 @@
-body {
+html, body {
     margin: 0%;
 }
 .principal {
-    height: 100%;
-    width: 99%;
+    box-sizing: border-box;
+    height: 100vh;
     border: 4px solid red;
-}
-.caja {
     display: flex;
-    flex: 100%;
-    font-size: 30px;
-    color: white;
+    justify-content: flex-start;
 }
-.caja > div {
-    padding: 4px;
-    padding-bottom: 20%;
-  }
+div {
+    color: white;
+    font-size: 30px;
+}
 .caja1 {
     background-color: green;
 }
