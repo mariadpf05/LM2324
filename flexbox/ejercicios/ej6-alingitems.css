@@ -1,0 +1,62 @@
+html, body{
+    overflow: hidden;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+}
+div{
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+.principal {
+    border: 5px solid red;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    align-items: first baseline;
+}
+
+.caja1 {
+    background-color: green;
+    font-size: small;
+}
+.caja2 {
+    background-color: deepskyblue;
+    font-size: large;
+}
+.caja3 {
+    background-color: purple;
+    font-size: x-large;
+}
+.caja4 {
+    background-color: darkslategrey;
+    font-size: xx-large;
+}
+.caja5 {
+    background-color: yellow;
+    font-size: xx-small;
+}
+.caja6 {
+    background-color: orange;
+    font-size: large;
+}
+
+.caja7 {
+    background-color: red;
+    font-size: large;
+}
+.caja8 {
+    background-color: grey;
+    font-size: large;
+}
+.caja9 {
+    background-color: greenyellow;
+    font-size: large;
+}
+.caja10 {
+    background-color: darkgreen;
+    font-size: small;
+}

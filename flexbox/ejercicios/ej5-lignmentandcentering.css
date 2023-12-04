@@ -10,8 +10,7 @@ div{
     color: white;
     font-size: 30px;
 }
-.principal
-{
+.principal{
     border: 5px solid red;
     box-sizing: border-box;
     width: 100%;

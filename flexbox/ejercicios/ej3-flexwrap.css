@@ -1,8 +1,8 @@
 html, body{
     overflow: hidden;
     height: 100vh;
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
 }
 div{
     box-sizing: border-box;
@@ -10,8 +10,7 @@ div{
     color: white;
     font-size: 30px;
 }
-.principal
-{
+.principal {
     border: 5px solid red;
     box-sizing: border-box;
     width: 100%;
