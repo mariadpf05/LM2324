@@ -1,58 +1,65 @@
 html, body{
     overflow: hidden;
     height: 100vh;
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
 }
 div{
     box-sizing: border-box;
     text-align: center;
     color: white;
-    font-size: 30px;
 }
-.principal
-{
+.principal {
     border: 5px solid red;
     box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
+    font-size: xx-large;
 }
 .principal > div
 {
-    font-size: 6px;
+    height: auto;
+    width: 10%;
 }
 .caja1 {
     background-color: green;
+    align-self: flex-start;
 }
 .caja2 {
     background-color: deepskyblue;
 }
 .caja3 {
     background-color: purple;
+    align-self: flex-start;
 }
 .caja4 {
     background-color: darkslategrey;
+    align-self: flex-start;
 }
 .caja5 {
     background-color: yellow;
+    align-self: flex-start;
 }
 .caja6 {
     background-color: orange;
+    align-self: center;
 }
 
 .caja7 {
     background-color: red;
+    align-self: flex-start;
 }
 .caja8 {
     background-color: grey;
+    align-self: flex-start;
 }
 .caja9 {
     background-color: greenyellow;
+    align-self: flex-end;
 }
 .caja10 {
     background-color: darkgreen;
+    align-self: flex-start;
 }
