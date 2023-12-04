@@ -4,16 +4,12 @@ html, body{
     margin: 0%;
     padding: 0%;
 }
-.principal
-{
-    border: 5px solid red;
+.principal {
     box-sizing: border-box;
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
+    vertical-align: middle;
+    line-height: 50px;
 }
 .principal > div {
     text-align: center;
@@ -29,7 +25,7 @@ html, body{
 }
 .principal div:nth-of-type(3) {
     background-color: purple;
-    flex-grow: 5;
+    flex-grow: 10;
 }
 .principal div:nth-of-type(4) {
     background-color: darkslategrey;
