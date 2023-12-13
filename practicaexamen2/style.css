@@ -36,7 +36,7 @@ html { /* Todo el documento se considera flexible y con dirección de columna */
   }
   
   .content {
-    flex: 1;
+    flex: 1; /* Hace que el navegador pueda coger el ancho necesario para poner cada opción en una línea */
   }
   
   p::first-letter { /* Primera letra de cada párrafo en negrita y mayúscula */
