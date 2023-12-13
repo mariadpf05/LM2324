@@ -18,8 +18,7 @@ body{
 }
 
 /* Afectará al estilo de los contactos Márgenes a 0 para los elementos h3 y ul  Aparecerán uno encima de otro */
-h3,
-ul {
+h3, ul {
   margin: 0;
 }
   
@@ -34,9 +33,7 @@ textarea:focus {
 }
   
 /* Estilo predeterminado para los elementos de entrada del formulario y el botón */
-input,
-textarea,
-button {
+input, textarea, button {
   width: 100%;
   border: 1px solid #000;
 }

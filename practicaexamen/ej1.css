@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /*  el tamaño de caja se va a mantener estable, no importa si se le añade un padding, el tamaño de caja se quedará con el tamaño indicado y el padding crecerá hacia adentro. */
   }
   h2 {
       margin: 0;
@@ -63,7 +63,7 @@
     background-color: #f2f2f2;
     height:100vh;
   }
-  .column.middle:hover {
+  .column.middle:hover { /* El ratón pasa por encima */
       -webkit-flex: 2;
       -ms-flex: 2;
       flex: 2;
