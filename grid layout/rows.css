@@ -13,25 +13,21 @@ body {
     border: 1px solid black;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto;
     justify-content: stretch;
   }
 
 .caja{
     background-color: lightgray;
     border: 4px solid black;
-    padding: 20px;
-    font-size: 30px;
     text-align: center;
     line-height: 150px;
 }
 .cajaazul{
-    grid-column: 1;
     grid-row: 1 / span 2;
     background-color: lightblue;
 }
 .cajaamarilla {
-    grid-column: 2;
     grid-row: 1 / span 2;
     background-color: lightyellow;
 }
