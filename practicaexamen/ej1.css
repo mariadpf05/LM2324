@@ -1,55 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-html {
-    background-color: #970043;
+* {
+    box-sizing: border-box;
+  }
+  h2 {
+      margin: 0;
+  }
+  body {
     font-family: 'Open Sans', Helvetica, sans-serif;
-    background-size: cover;
-}
-body{
-    margin: 0px;
-}
-p::first-letter {
-    font-size: 1rem;
-    font-weight: bold;
-}
-header, footer {
+    background-color: #970043;
+    height: 100vh;
+  }
+  
+  .header {
     background-color: #ffd100;
+    padding: 20px;
     text-align: center;
-}
-header {
+    font-size: x-large;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-}
-main {
+  }
+  
+  /* Contenedores flexibles */
+  .row {
+    display: -webkit-flex;
     display: flex;
-    flex-direction: row;
-}
+  }
+  
+  /* Create three unequal columns that sits next to each other */
+  .column {
+    padding: 10px;
+    background-color:#970043;
+  }
 
-.imgcentro {
-    border-radius: 10px;
-    max-width: 100%;
+  /* Columnas laterales */
+  .column.side {
+     -webkit-flex: 1;
+     -ms-flex: 1;
+     flex: 1;
+     align-content: center;
+     justify-content: center;
+     text-align: center;
+     margin-top: auto;
+     margin-bottom: auto;
+  }
+  img {
+      max-width:100%;
+  }
+  .foto {
+      max-width:100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+  }
+  .centrar {
+    text-align: center;
+  }
+  /* Columna central */
+  .column.middle {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    overflow: auto;
+    background-color: #f2f2f2;
+    height:100vh;
+  }
+  .column.middle:hover {
+      -webkit-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+      overflow: auto;
+      background-color: #970043;
+      color: #f2f2f2;
+  }
 
-}
-.izquierda{
-}
-.derecha{
-}
-article, aside, footer, header {
-    box-sizing: border-box; 
-}
-.email {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-.ayuntamiento{
-    color: #ffd100;
-    text-decoration: none;
-}
-footer{
+  p {
+      margin: 0 auto;
+  }
+  p::first-letter {
+      font-size: 1.5rem;
+      font-weight: bold;
+  }
+  
+  a {
+      text-decoration: none;
+      font-weight: bold;
+      cursor:help;
+      color:#ffd100
+  }
+  .footer {
+    background-color: #ffd100;
+    padding: 10px;
+    text-align: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-}
-@media screen and (min-width: 768px) {
-    
+  }
+  .footer a{
+      color:black;
+  }
+  @media (max-width: 768px) {
+    .row {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
   }
