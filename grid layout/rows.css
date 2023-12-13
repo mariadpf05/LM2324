@@ -16,7 +16,7 @@ body {
     justify-content: stretch; /* Hace que las cajas se centren bien */
 }
 
-.caja{
+.caja{ /* estilo predeterminado para todas las cajas */
     background-color: lightgray;
     border: 4px solid black;
     text-align: center;
