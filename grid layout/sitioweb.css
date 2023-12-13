@@ -1,58 +1,46 @@
 body {
-    background-color: lightgoldenrodyellow;
-    font-family: Arial;
-    text-align: center;
+  background-color: lightgoldenrodyellow;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align:center;
 }
-/*
-.principal {
-    display: grid;
-    background-color: lightgray;
-    padding: 20px;
-    margin: 0 auto;
-    width: 80%;
-    border: 2px dashed rgba(0, 0, 0, 0.8);
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
-    justify-content: stretch;
-  }
-  .caja{
-    background-color: lightgray;
-    border: 4px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
+.caja{
+  border: 4px solid black;
+  background-color: lightgray;
+  text-align:center;
 }
-.header{
-    background-color: lightblue;
-} */
-.header {
-    grid-area: header; 
-    background-color: lightblue;
-}
-.menu { grid-area: menu; }
-.content { grid-area: main; }
-.banners { grid-area: right; }
-.footer { grid-area: footer; }
-
-.principal {
+.principal{
   display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
-  gap: 10px;
+  grid-template-areas: 'header header' 'menu menu' 'content banners' 'footer footer'; /* Ancho de las columnas */
+  grid-template-rows: 10% 20% auto 10%; /* Altura de las filas */
+  justify-content: stretch;
+  width: 80%;
+  height: 84vh;
+  margin: 0 auto;
   background-color: lightgray;
   border: 2px dashed black;
   padding: 20px;
-  margin:0 auto;
-  width: 80%;
 }
-
-.principal > div {
-  background-color: lightgray;
-  text-align: center;
-  padding: 20px;
-  border: 4px solid black;
-  font-size: 30px;
+.header {
+  grid-area: header;
+  background-color: lightblue;
+  line-height: 8vh;
+}
+.menu{
+  grid-area: menu;
+  background-color: lightyellow;
+  line-height: 15vh;
+}
+.content{
+  grid-area: content;
+  background-color: lightsalmon;
+  line-height: 50vh;
+}
+.banners{
+  grid-area: banners;
+  background-color:lightseagreen;
+  line-height: 50vh;
+}
+.footer{
+  grid-area: footer;
+  line-height: 8vh;
 }
