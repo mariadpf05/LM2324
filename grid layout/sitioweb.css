@@ -8,7 +8,7 @@ body {
   background-color: lightgray;
   text-align:center;
 }
-.principal{
+.principal{ /* Caja que contiene el resto de cajas */
   display: grid;
   grid-template-areas: 'header header' 'menu menu' 'content banners' 'footer footer'; /* Ancho de las columnas */
   grid-template-rows: 10% 20% auto 10%; /* Altura de las filas */

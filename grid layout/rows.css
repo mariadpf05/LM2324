@@ -1,21 +1,20 @@
 body {
-    background-color: antiquewhite;
+    background-color: antiquewhite;  /* Fonde de la página*/
     font-family: Arial;
     text-align: center;
 }
 
-.principal {
+.principal { /* Caja que contiene el resto de cajas */
     display: grid;
     background-color: lightgreen;
     padding: 20px;
     margin: 0 auto;
     width: 80%;
     border: 1px solid black;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    justify-content: stretch;
-  }
+    grid-template-columns: auto auto auto; /* Ancho de las columnas */
+    grid-template-rows: auto; /* Altura de las filas */
+    justify-content: stretch; /* Hace que las cajas se centren bien */
+}
 
 .caja{
     background-color: lightgray;
@@ -24,19 +23,19 @@ body {
     line-height: 150px;
 }
 .cajaazul{
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 2; /* La caja de la fila 1 se expande 2 filas */
     background-color: lightblue;
 }
 .cajaamarilla {
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 2; /* La caja de la fila 1 se expande 2 filas */
     background-color: lightyellow;
 }
 .cajaroja{
     background-color: lightsalmon;
 }
 .caja10{
-    grid-column: 3;
-    grid-row: 3/ span 2;
+    grid-column: 3; /* Como no se pone automáticamente en la columna 3 lo ponemos manualmente*/ 
+    grid-row: 3/ span 2; /* La caja de la fila 3 se expande 2 filas */
     background-color: lightgray;
 }
 .cajaverde{
