@@ -6,14 +6,13 @@ body {
 
 .principal {
     display: grid;
+    grid-template-columns: auto auto auto; /* Ancho de las columnas */
+    grid-template-rows: auto; /* Altura de las filas */
     background-color: lightgreen;
     padding: 20px;
     margin: 0 auto;
     width: 80%;
     border: 1px solid black;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto;
     justify-content: stretch;
   }
 
@@ -37,40 +36,16 @@ body {
 }
 .cajaamarilla {
     grid-column: 1 / span 2;
-    grid-row: 2;
     background-color: lightyellow;
-    border: 4px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
 }
 .cajaroja{
     background-color: lightsalmon;
-    border: 4px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
 }
 .caja11{
     grid-column: 2 / span 2;
-    grid-row: 5;
-    background-color: lightgray;
-    border: 4px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
 }
 .cajaverde{
     grid-column: 1 / span 3;
-    grid-row: 6;
     background-color: lightseagreen;
-    border: 4px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
 }
   
