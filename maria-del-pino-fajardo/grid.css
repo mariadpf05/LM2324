@@ -87,6 +87,10 @@ footer{
     color: white;
 
 }
+.email {
+    color: white;
+    text-decoration: none;
+}
 @media (max-width: 760px) {
     main {
         grid-template-rows: 1fr;
