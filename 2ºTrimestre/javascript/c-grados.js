@@ -5,11 +5,11 @@ function convertir(divisa){
     if (divisa=="Celcius"){
         //Convierto a celcius
         resultado = valor * 0.91;
-        document.getElementById("resultado").innerHTML = resultado + " €";
+        document.getElementById("resultado").innerHTML = resultado + " ºC";
     }
     else{
         //Convertir a Fahrenheit
         resultado = valor * 1.09;
-        document.getElementById("resultado").innerHTML = resultado + " $";
+        document.getElementById("resultado").innerHTML = resultado + " ºF";
     }
 }
