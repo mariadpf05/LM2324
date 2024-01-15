@@ -4,12 +4,12 @@ function convertir(divisa){
     let resultado = 0;
     if (divisa=="Celcius"){
         //Convierto a celcius
-        resultado = valor * 0.91;
+        resultado = (valor - 32) * 5/9;
         document.getElementById("resultado").innerHTML = resultado + " ºC";
     }
     else{
         //Convertir a Fahrenheit
-        resultado = valor * 1.09;
+        resultado = (valor * 9/5) + 32;
         document.getElementById("resultado").innerHTML = resultado + " ºF";
     }
 }
