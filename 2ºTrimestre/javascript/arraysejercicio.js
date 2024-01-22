@@ -8,3 +8,12 @@ function añade() {
 frutas.push();
 document.getElementById("demo").innerHTML = frutas;
 }
+function creciente (){
+
+}
+function decreciente (){
+    
+}
+function buscar (){
+    
+}
