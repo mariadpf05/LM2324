@@ -15,7 +15,5 @@ function decreciente (){
 
 }
 function buscar (){
-    const elemento = ["escribe"];
-    let position = elemento.indexOf() + 1;
-    document.getElementById("demo").innerHTML = " la palabra esta en la posicion " + position;
+    const elemento = document.getElementById("demo").innerHTML = " la palabra esta en la posicion " + position;
 }
