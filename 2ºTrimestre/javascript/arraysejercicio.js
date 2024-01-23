@@ -1,19 +1,21 @@
-var frutas = ["Platano", "Naranja", "Manzana", "Mango"];
-document.getElementById("demo").innerHTML = frutas;
+var elemento = ["escribe"];
+document.getElementById("demo").innerHTML = elemento;
 function elimina() {
-frutas.pop();
-document.getElementById("demo").innerHTML = frutas;
+elemento.pop();
+const elemento = document.getElementById("demo").innerHTML = elemento;
 }
 function añade() {
-frutas.push();
-document.getElementById("demo").innerHTML = frutas;
+elemento.push();
+const elemento = document.getElementById("demo").innerHTML = elemento;
 }
 function creciente (){
 
 }
 function decreciente (){
-    
+
 }
 function buscar (){
-    
+    const elemento = ["escribe"];
+    let position = elemento.indexOf() + 1;
+    document.getElementById("demo").innerHTML = " la palabra esta en la posicion " + position;
 }
