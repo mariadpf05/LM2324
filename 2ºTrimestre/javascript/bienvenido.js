@@ -10,5 +10,6 @@ function saludo() {
     }
     else {
         alert('Bienvenido '+usuario + ' con contraseña ' + clave);
-    } */
+    } 
+*/
 }

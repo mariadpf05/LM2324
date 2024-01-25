@@ -6,17 +6,31 @@
     <title>Añadir y eliminar elementos de un array</title>
     <script src="arraysejercicio.js"></script>
 </head>
+<!--
 <body>
-
     <input type="text" id="elemento" placeholder="escribe">
     <button onclick="elimina()">Elimina</button>
     <button onclick="añade()">Añade</button>
     <button onclick="creciente()">Creciente</button>
     <button onclick="decreciente()">Decreciente</button>
 
-    <input type="text" id="budcarelemento" placeholder="buscar elemento">
+    <input type="text" id="buscarelemento" placeholder="buscar elemento">
         <button onclick="buscar()">Buscar</button>
 
     <p id="demo"></p>
 </body>
+-->
+<h2>Manipulación de Array</h2>
+
+<input type="text" id="elemento" placeholder="Nuevo elemento">
+<button onclick="agregarElemento()">Añadir</button>
+<button onclick="eliminarElemento()">Eliminar</button>
+<button onclick="ordenarCreciente()">Ordenar Ascendente</button>
+<button onclick="ordenarDecreciente()">Ordenar Descendente</button>
+
+<p>Array actual: <span id="arrayOutput"></span></p>
+
+<input type="text" id="buscarElemento" placeholder="Buscar elemento">
+<button onclick="buscarElemento()">Buscar</button>
+<p>Posición del elemento: <span id="posicionOutput"></span></p>
 </html>
