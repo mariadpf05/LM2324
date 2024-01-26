@@ -10,15 +10,15 @@
 "sumar" y "multiplicar". Si el usuario pulsa "sumar" nuestro script mostrará el total de la suma de todos sus elementos
 mientras que si pulsa "multiplicar" mostrará el producto.-->
 <body>
-    <input type="number" id="numeroInput" placeholder="Introducir numero">
+    <input type="number" id="añadido" placeholder="Introducir numero">
     <button onclick="añadir()">Añadir número</button>
     <p>
         Sumar los números:
-        <button onclick="calcular('sumar')">Sumar</button>
+        <button onclick="sumar()">Sumar</button>
     </p>
     <p>
         Multiplicar los números:
-        <button onclick="calcular('multiplicar')">Multiplicar</button>
+        <button onclick="multiplicar()">Multiplicar</button>
     </p>
     <p id="resultado"></p>
 </body>
