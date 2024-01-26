@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Red social</title>
+    <meta charset="UTF-8">
+    <style>
+        .btn-image {
+            background-image: url('iconoPapelera.png');
+            background-size: cover;
+            width: 65px;
+            height: 65px;
+            float: right;
+        }
+        .tweet {
+            width:500px;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="post" placeholder="Escribe post"><button onclick="añadir()">Enviar</button>
+    <p>Pulsa el botón para sustraer elemento.</p>
+    <button onclick="ordenar()">Ordenar</button>     
+    <p id="demo"></p>
+    <script>
+        let posts = document.getElementById('post').value
+        imprimePosts();
+        function ordenar(){
+            post.sort((a, b) => a - b);
+            imprimePosts();
+            document.getElementById("demo").innerHTML=codigoHTML;
+        }
+        function eliminar() {
+            let pos = posts.indexOf(elemento);
+            posts.splice(pos,1);
+            imprimePosts();
+        }
+        function anadir()
+        {
+            let mensaje = añadir()
+            posts.push(mensaje);
+            imprimePosts();
+        }
+        function añadir(){
+            let longitud= document.getElementById('post').value
+            let i=0, codigoHTML="";
+            let icono="<div class='tweet'><img src='iconoTwitter.png'>";
+            for (i=0;i<longitud;i++){
+                codigoHTML+=icono+posts[i]+" <button class=\"btn-image\" onclick='eliminar(posts["+i+"]);''></button><br></div>";
+            }
+            document.getElementById("demo").innerHTML=codigoHTML;
+        }
+</script>
+</body>
+</html>
