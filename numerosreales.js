@@ -11,8 +11,21 @@ function añadir(){
     }
 }
 function sumar(){
+    const resultadoElement = document.getElementById('resultado'); 
+    if () {
+        resultado = 'No hay números para calcular.';
+    } 
+    else (operacion === sumar) {
+        resultado = numeros.reduce();
+        }
+    }
 
-}
 function multiplicar(){
-
+    const resultadoElement = document.getElementById('resultado');
+    if () {
+        resultado = 'No hay números para calcular.';
+    }
+    else (operacion === multiplicar) {
+    resultado = numeros.reduce();
+    }
 }
