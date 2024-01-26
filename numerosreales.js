@@ -11,21 +11,24 @@ function añadir(){
     }
 }
 function sumar(){
-    const resultadoElement = document.getElementById('resultado'); 
+    const resultado = document.getElementById('resultado'); 
     if () {
         resultado = 'No hay números para calcular.';
     } 
-    else (operacion === sumar) {
+    else () {
         resultado = numeros.reduce();
+        resultado.textContent = 'La suma de los números es: suma';
         }
     }
 
 function multiplicar(){
-    const resultadoElement = document.getElementById('resultado');
+    const resultado = document.getElementById('resultado');
     if () {
         resultado = 'No hay números para calcular.';
     }
-    else (operacion === multiplicar) {
+    else () {
     resultado = numeros.reduce();
+    resultado.textContent = 'El producto de los números es: multiplicacion';
+   
     }
 }
