@@ -24,26 +24,24 @@
     <button onclick="ordenar()">Ordenar</button>     
     <p id="demo"></p>
     <script>
-        let posts = document.getElementById('post').value
+        let posts = ['Mi primer tweet', 'Por fin viernes', 'LM la mejor clase']
         imprimePosts();
         function ordenar(){
-            post.sort((a, b) => a - b);
+            posts.sort();
             imprimePosts();
-            document.getElementById("demo").innerHTML=codigoHTML;
         }
-        function eliminar() {
+        function eliminar(elemento) {
             let pos = posts.indexOf(elemento);
             posts.splice(pos,1);
             imprimePosts();
         }
-        function anadir()
-        {
-            let mensaje = añadir()
+        function añadir(){
+            var mensaje = document.getElementById("post").value;
             posts.push(mensaje);
             imprimePosts();
         }
-        function añadir(){
-            let longitud= document.getElementById('post').value
+        function imprimePosts(){
+            let longitud= post.length
             let i=0, codigoHTML="";
             let icono="<div class='tweet'><img src='iconoTwitter.png'>";
             for (i=0;i<longitud;i++){
