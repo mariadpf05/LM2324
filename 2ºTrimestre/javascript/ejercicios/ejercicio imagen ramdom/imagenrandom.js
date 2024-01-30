@@ -18,5 +18,5 @@ function rand(n){
     //incluso, si usamos numeros para las imágenes, la script puede ser más sencilla
     
     function aleatoria(){
-         document.getElementById("aleatoria").src = cambia_imagen[rand(8)-1];
+         document.getElementById("aleatoria").src = cambia_imagen[rand(7)-1];
     }
