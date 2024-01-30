@@ -10,11 +10,13 @@ function rand(n){
     cambia_imagen[2] = "imagen3.jpg";
     cambia_imagen[3] = "imagen4.jpg";
     cambia_imagen[4] = "imagen5.jpg";
+    cambia_imagen[5] = "imagen6.jpg";
+    cambia_imagen[6] = "imagen7.jpg";
 
     //la función para que al clickear establezca el source del tag imagem que tiene id "ia" (Imagen aleatoria)
     //como no son tantas, puede que alguna vez se repita 2 veces la misma
     //incluso, si usamos numeros para las imágenes, la script puede ser más sencilla
     
     function aleatoria(){
-         document.getElementById("aleatoria").src = cambia_imagen[rand(5)-1];
+         document.getElementById("aleatoria").src = cambia_imagen[rand(8)-1];
     }
