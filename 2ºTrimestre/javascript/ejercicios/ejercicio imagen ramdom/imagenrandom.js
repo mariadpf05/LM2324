@@ -9,7 +9,6 @@ function numero(x){
     cambia_imagen[4] = "imagen5.jpg";
     cambia_imagen[5] = "imagen6.jpg";
     cambia_imagen[6] = "imagen7.jpg";
-
 function aleatoria(){
      document.getElementById("aleatoria").src = cambia_imagen[numero(7)-1];
 }
