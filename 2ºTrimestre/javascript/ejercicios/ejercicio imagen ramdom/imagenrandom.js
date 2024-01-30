@@ -1,0 +1,4 @@
+var imagen = []
+function aleatoria(){
+    
+}
