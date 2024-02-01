@@ -8,14 +8,14 @@
 <!--Dado un conjunto de imágenes que se encuentran en una carpeta, por ejemplo, images, desarrolla una página web que cada vez que se cargue muestre una de esas imágenes de manera aleatoria. Indicación: los nombres de las imágenes serán elementos de un array.
 Nombre archivo: imagenrandom.html-->
 <body onload="aleatoria()">
-    <p><img id="aleatoria" alt="Imagen aleatoria" src="imagen1.jpg" /></p>
+    <p><img id="aleatoria" alt="Imagen aleatoria" src="imagen1.jpg"></p>
     <script>
         let archivos = ["imagen1.jpg","imagen2.jpg","imagen3.jpg","imagen4.jpg","imagen5.jpg","imagen6.jpg","imagen7.jpg"]
         function random(min, max) {
             return(Math.floor(Math.random() * (max - min + 1)) + min);
         }
         function aleatoria() {
-            let numeros = random() * (0,archivos.length -1);
+            let numeros = random (0,archivos.length -1);
             document.getElementById("aleatoria").src ="imagenes/" + archivos[numeros];
         }
     </script>
