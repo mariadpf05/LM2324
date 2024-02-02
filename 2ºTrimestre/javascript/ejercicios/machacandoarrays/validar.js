@@ -45,7 +45,7 @@ function validaPassword(){
         passwordsOK = false;
     return passwordsOK;
 }
-function validarDNI{
+function validarDNI(){
     var letras =['T','R','W','A','G','M','Y','F','P','D','X','B','N','Z','S','Q','V','H','L','C','K','E'];
     var cadena = document.getElementById("dni").value; //DNI completo
     var numero = parseInt(cadena.substring(0,8)); //Parte numérica
