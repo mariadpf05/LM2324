@@ -3,10 +3,8 @@ var numeros = [];
 function anadir(){
     var n = parseFloat(document.getElementById("n").value);
     numeros.push(n);
-    document.getElementById("mostrar").innerHTML = numeros;
+    document.getElementById("resultado").innerHTML = numeros;
 }
-
-
 function sumar() { 
     suma = 0
     for (var i = 0 ; i< numeros.length; i++) {
@@ -18,11 +16,13 @@ function sumar() {
             alert("Introduzca una calificación entre 0 y 10")
         }
     }
-    document.getElementById("mostrar").innerHTML = suma;
+    document.getElementById("resultado").innerHTML = suma;
 }
-
 function eliminar(){ 
-numeros.splice("");
-document.getElementById('mostrar').innerHTLM = numeros;
-
+    const nEliminar = document.getElementById('n').value;
+    const index = numeros.indexOf(nEliminar);
+    if (index !== -1) {
+      numeros.splice(index, 1);
+      actualizarOutput();
+    }
 }
