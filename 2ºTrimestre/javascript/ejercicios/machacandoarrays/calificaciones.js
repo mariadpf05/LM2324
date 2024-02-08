@@ -1,28 +1,32 @@
-var numeros = [];
+var notas = [];
 
 function anadir(){
-    var n = parseFloat(document.getElementById("n").value);
-    numeros.push(n);
-    document.getElementById("resultado").innerHTML = numeros;
-}
-function sumar() { 
-    suma = 0
-    for (var i = 0 ; i< numeros.length; i++) {
-        if (numeros[i]  == i>=0 && i<=10) {
-            let suma = values.reduce((previous, current) => current += previous);
-            let   = suma / values.length;
+    let numero = parseFloat(document.getElementById("numero").value);
+    //Borramos cualquier mensaje de error previo
+    document.getElementById("aviso").innerHTML = ""
+    if (isNaN(numero)){ //Si true significaa que no es un número
+        document.getElementById("aviso").innerHTML = "Debes introducir un número entre 0 y 10"
+    }
+    else{
+        //Compruebo que está comprendido entre 0 y 10
+        if (numero<0 || numero>10){
+            document.getElementById("aviso").innerHTML = "Debes introducir un número entre 0 y 10"
         }
         else {
-            alert("Introduzca una calificación entre 0 y 10")
+            notas.push(numero);
+            document.getElementById("notas").innerHTML = notas;
         }
-    }
-    document.getElementById("resultado").innerHTML = suma;
+    }        
 }
-function eliminar(){ 
-    const nEliminar = document.getElementById('n').value;
-    const index = numeros.indexOf(nEliminar);
-    if (index !== -1) {
-      numeros.splice(index, 1);
+function eliminar(){
+    numeros.splice();
       actualizarOutput();
+}
+function calcularMedia(){
+    let total = 0.0;
+    for (var i=0; i<notas.length;i++){
+        total = total+notas[i]; //total += notas[i]
     }
+    total = total/notas.length;
+    document.getElementById("resultado").innerHTML = total.toFixed(2);
 }

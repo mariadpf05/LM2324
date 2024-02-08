@@ -55,7 +55,14 @@ function validarDNI(){
     var letraUsuario = cadena[8]; // Letra escrita por el usuario
     var letraReal = letra[numero%23]; // Letra "real" del DNI calculada según "fórmula"
     var dniValido =true;
+    
     if (letraUsuario!=letraReal) // Si no coincide letras es falso
         dniValido = false;
     return dniValido;
+}
+function limpia(){
+    let cadena = document.getElementById("cadena").value;
+    let cadenaSinEspacios = cadena.replace(/ /g,"");
+    let cadenaLimpia = cadenaSinEspacios.toUpperCase();
+    document.getElementById(resultado).innerHTML =  cadenaLimpia;
 }

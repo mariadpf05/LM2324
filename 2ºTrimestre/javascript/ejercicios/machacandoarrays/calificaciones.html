@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calificaciones</title>
     <script src="calificaciones.js"></script>
-
+    <style>
+        #aviso{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <input id="n" type="number" placeholder="Introduzca un numero">
+    <input id="numero" type="text" placeholder="Introduzca un numero">
+    <p id="aviso"></p>
+    <p id="notas"></p> <!--Notas introducidas-->
+    <p id="resultado"></p> <!--Cálculo de medias-->
     <button onclick="anadir()">Añadir calificación</button>
     <button onclick="eliminar()">Eliminar calificación</button>
-    <button onclick="sumar()">Calcular nota media </button>
-    <p id="resultado"></p>
+    <button onclick="calcularMedia()">Calcular nota media </button>
    
 </body>
 </html>
