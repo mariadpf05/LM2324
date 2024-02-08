@@ -18,10 +18,12 @@ function anadir(){
         }
     }        
 }
-function eliminar(){
-    numeros.splice();
-      actualizarOutput();
-}
+function eliminar() {
+    document.getElementById("aviso").innerHTML = ""
+    document.getElementById("notas").innerHTML = ""
+    document.getElementById("resultado").innerHTML = ""
+    notas = [];
+  }
 function calcularMedia(){
     let total = 0.0;
     for (var i=0; i<notas.length;i++){
