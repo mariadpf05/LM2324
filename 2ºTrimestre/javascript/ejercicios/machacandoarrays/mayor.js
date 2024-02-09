@@ -6,3 +6,11 @@ function mayor(vector){
     }
     return mayor;
 }
+function menor(vector){
+    let menor = vector[0]; //por defecto el primer elemento es el menor
+    for (var i=0;i<vector.length;i++){
+        if (vector[i]<menor)
+        menor = vector[i]
+    }
+    return menor;
+}
