@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora humana</title>
     <style>
         div#examen {
         border:#000 1px solid;
@@ -9,16 +11,32 @@
     }
     </style>
     <script>
-        var por = 0, test, examen, pregunta, opcion, chA, chB,chC, correctas
         var preguntas = [
-            ["preguntas"]
+                "¿Cuánto es 10 + 4?",
+                "¿Cuánto es 20 - 9?",
+                "¿Cuánto es 7 x 3?",
+                "¿Cuánto es 8 / 2?"
         ];
-        var total = preguntas.length; //Total de preguntas
+        var respuestas = [
+            ["14", "12", "16"],
+            ["11","13","7"],
+            ["21","24","25"],
+            ["4","2","10"]
+        ];
+        var indice_aleatorio = Math.floor(Math.random()*preguntas.length);
+        document.getElementById("examen") = preguntas[indice_aleatorio];
+        var txt_respuestas = "";
+        for(i in respuestas_posibles){
+            txt_respuestas += '<input type="radio><label>+respuestas_posibles[i]></label>';
+            document.getElementById("respuestas").innerHTML = txt_respuestas;
+            document.getElementById("pregunta").innerHTML = preguntas[indice_aleatoria];
+        }
     </script>
 </head>
 <body>
     <h1>Calculadora humana</h1>
     <h2 id="estado"></h2>
     <div id="examen"></div>
+    <div id="respuesta"></div>
 </body>
 </html>
