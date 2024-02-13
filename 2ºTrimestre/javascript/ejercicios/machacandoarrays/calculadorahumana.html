@@ -11,7 +11,7 @@
     </style>
     <script>
     /* Sustituye los ******** por lo que corresponda */
-    var pos = 0, test, examen, pregunta, opcion, opciones, chA, chB, chC, correctas = preguntas;
+    var pos = 0, test, examen, pregunta, opcion, opciones, chA, chB, chC, correctas = 0; /*Iniciamos a 0 las correctas*/
     var preguntas = [
         [ "¿Cuánto es 10 + 4?", "12", "14", "16", "B" ],
 	    [ "¿Cuánto es 20 - 9?", "7", "13", "11", "C" ],
@@ -20,7 +20,7 @@
     ];
     function hacerPregunta(){
 	    test = document.getElementById("examen"); /* Obtengo el div del examen */
-	    if(pos>=preguntas.length){ /* ¿Cuando hemos llegado al final del cuestionario? La variable pos la comparo con algo */
+	    if(pos >=preguntas.length){ /* ¿Cuando hemos llegado al final del cuestionario? La variable pos la comparo con algo */
 		    test.innerHTML = "<h2>Conseguiste acertar "+ correctas +" de "+ preguntas.length +" preguntas</h2>"; /* En correctas llevamos el contador de acertadas */
 		    document.getElementById("estado").innerHTML = "Prueba completada"; /* En el estado decimos que hemos completado el cuestionario */
 		    pos = 0;
@@ -36,7 +36,7 @@
 	    test.innerHTML += "<input type='radio' name='opciones' value='A'> "+chA+"<br>";
 	    test.innerHTML += "<input type='radio' name='opciones' value='B'> "+chB+"<br>";
 	    test.innerHTML += "<input type='radio' name='opciones' value='C'> "+chC+"<br><br>";
-	    test.innerHTML += <button onclick='comprobarRespuesta()'>Comprobar respuesta</button>; /* Aquí deberíamos poner un botón que cuando se pulse se compruebe la respuesta */
+	    test.innerHTML += "<button onclick='comprobarRespuesta()'>Comprobar respuesta</button>"; /* Aquí deberíamos poner un botón que cuando se pulse se compruebe la respuesta */
     }
     function comprobarRespuesta(){
 	    opciones = document.getElementsByName("opciones");
