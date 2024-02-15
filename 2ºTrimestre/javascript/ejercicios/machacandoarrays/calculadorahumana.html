@@ -20,7 +20,7 @@
     ];
     function hacerPregunta(){
 	    test = document.getElementById("examen"); /* Obtengo el div del examen */
-	    if(pos >=preguntas.length){ /* ¿Cuando hemos llegado al final del cuestionario? La variable pos la comparo con algo */
+	    if(pos==preguntas.length){ /* ¿Cuando hemos llegado al final del cuestionario? La variable pos la comparo con algo */
 		    test.innerHTML = "<h2>Conseguiste acertar "+ correctas +" de "+ preguntas.length +" preguntas</h2>"; /* En correctas llevamos el contador de acertadas */
 		    document.getElementById("estado").innerHTML = "Prueba completada"; /* En el estado decimos que hemos completado el cuestionario */
 		    pos = 0;
@@ -41,7 +41,7 @@
     function comprobarRespuesta(){
 	    opciones = document.getElementsByName("opciones");
 	    for(var i=0; i<opciones.length; i++){
-		if(opciones[i].checked){ /* Comprobamos cual está marcado por el usuario */
+			if(opciones[i].checked){ /* Comprobamos cual está marcado por el usuario */
 			opcion = opciones[i].value;
 		    }
 	    }
