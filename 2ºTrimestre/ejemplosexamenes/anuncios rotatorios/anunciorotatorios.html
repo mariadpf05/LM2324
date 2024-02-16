@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <img src="" id="banner" alt="publicidad">
+    <h1>Anuncios rotatorios</h1>
+    <img src="banner0.png" id="fotoActual" alt="publicidad" onclick="pulsa">
 <script>
     var anuncio=new Array();
     var indice=0; 
@@ -26,14 +27,18 @@
     enlace[4]="https://launidad.movistarplus.es/?dis_c=331187589&dclid=CL-Lt9zx4_YCFdZEHQkdLpkExQ";
     enlace[5]="https://www.tikamoon.es";
     
-    function atras(){
+    function publicidad(){
+
+    }
+
+    function cambiar(){
         if(indice>0) { /* Si no era la primera foto... */
             indice=indice-1;
         }
         else {
             indice= fotos.length-1 ; /* Ponemos la anterior */       
         }
-        document.getElementById("fotoActual").src = "s"+indice+".jpg";
+        document.getElementById("fotoActual").src = "banner"+indice+".png";
     }
     function siguiente(){
         totalFotos = fotos.length;
@@ -43,7 +48,7 @@
         else{
             indice=indice+1;        
         }
-        document.getElementById("fotoActual").src = "s"+indice+".jpg"; /* Ponemos el nombre del fichero */
+        document.getElementById("fotoActual").src = "banner"+indice+".png"; /* Ponemos el nombre del fichero */
     }
 </script>
         
