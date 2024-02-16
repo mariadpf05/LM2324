@@ -27,29 +27,9 @@
     enlace[4]="https://launidad.movistarplus.es/?dis_c=331187589&dclid=CL-Lt9zx4_YCFdZEHQkdLpkExQ";
     enlace[5]="https://www.tikamoon.es";
     
-    function publicidad(){
-
-    }
-
-    function cambiar(){
-        if(indice>0) { /* Si no era la primera foto... */
-            indice=indice-1;
-        }
-        else {
-            indice= fotos.length-1 ; /* Ponemos la anterior */       
-        }
-        document.getElementById("fotoActual").src = "banner"+indice+".png";
-    }
-    function siguiente(){
-        totalFotos = fotos.length;
-            if (indice==totalFotos-1){
-        indice=0; /* Empezamos de nuevo */
-        }
-        else{
-            indice=indice+1;        
-        }
-        document.getElementById("fotoActual").src = "banner"+indice+".png"; /* Ponemos el nombre del fichero */
-    }
+function pulsa(){
+    window.open(enlaces[indice]);
+}
 </script>
         
 </body>
