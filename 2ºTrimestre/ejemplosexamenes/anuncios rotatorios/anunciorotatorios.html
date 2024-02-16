@@ -8,7 +8,7 @@
     <img src="" id="banner" alt="publicidad">
 <script>
     var anuncio=new Array();
-    var indice=0; /* Inicializamos el indice del Array */
+    var indice=0; 
     var totalFotos;
     anuncio[0]="banner0.png";
     anuncio[1]="banner1.png";
@@ -25,6 +25,26 @@
     enlace[3]="https://www.madridhifi.com";
     enlace[4]="https://launidad.movistarplus.es/?dis_c=331187589&dclid=CL-Lt9zx4_YCFdZEHQkdLpkExQ";
     enlace[5]="https://www.tikamoon.es";
+    
+    function atras(){
+        if(indice>0) { /* Si no era la primera foto... */
+            indice=indice-1;
+        }
+        else {
+            indice= fotos.length-1 ; /* Ponemos la anterior */       
+        }
+        document.getElementById("fotoActual").src = "s"+indice+".jpg";
+    }
+    function siguiente(){
+        totalFotos = fotos.length;
+            if (indice==totalFotos-1){
+        indice=0; /* Empezamos de nuevo */
+        }
+        else{
+            indice=indice+1;        
+        }
+        document.getElementById("fotoActual").src = "s"+indice+".jpg"; /* Ponemos el nombre del fichero */
+    }
 </script>
         
 </body>
