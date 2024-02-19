@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargas</title>
+</head>
+<body>
+    <p>Añadir Ficheros a una lista con document.CreateElement y appendChild</p>
+    <ul id="lista">
+    </ul>
+    <button type="button" onclick="anadirFichero()">Añade Fichero</button>
+
+    <script>
+        function anadirFichero() {
+            var lista = document.getElementById("lista");
+            var Fichero = document.createElement("li");
+            Fichero.textContent = "Fichero " + (lista.children.length + 1); // Observa en la consola lista y lista.children
+            lista.appendChild(Fichero);
+        }
+    </script>
+</body>
+</html>
