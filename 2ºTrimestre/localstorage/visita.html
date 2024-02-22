@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitas</title>
+</head>
+<body>
+    <p id="visita"></p>
+    <script>
+        function visita(){
+            let conexion=localStorage.getItem("conexion")
+            if (conexion!=null){
+                conexion = parseInt(conexion);
+                document.getElementById("visita").innerHTML="Has visitado esta página "+conexion+" veces.";
+                conexion = conexion+1;
+                localStorage.setItem("conexion", conexion);
+            }
+            else{
+                document.getElementById("visita").innerHTML="Es la primera vez que entras en la página";
+                localStorage.setItem("conexion","1");
+            }
+        }
+        window.onload = visita();
+    </script>
+</body>
+</html>
