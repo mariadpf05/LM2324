@@ -6,18 +6,18 @@
     <title>Descargas</title>
 </head>
 <body>
-    <p>Añadir Ficheros a una lista con document.CreateElement y appendChild</p>
-    <ul id="lista">
-    </ul>
-    <button type="button" onclick="anadirFichero()">Añade Fichero</button>
-
+    <p>Descargas</p>
+    <ul id="lista"></ul>
     <script>
         function anadirFichero() {
             var lista = document.getElementById("lista");
-            var Fichero = document.createElement("li");
-            Fichero.textContent = "Fichero " + (lista.children.length + 1); // Observa en la consola lista y lista.children
-            lista.appendChild(Fichero);
+            for (var i=1;i<=20;i++){
+                var elemento = document.createElement("li");
+            elemento.innerHTML = "<a href='ficheros/fichero"+i+".pdf' target='_blank'>Fichero " + (lista.children.length + 1)+"<img width='25' src='download.png'></a>"; 
+            lista.appendChild(elemento);
+            }
         }
+        window.onload = anadirFichero();
     </script>
 </body>
 </html>

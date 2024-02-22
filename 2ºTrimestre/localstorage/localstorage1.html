@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage 1</title>
+</head>
+<body>
+    <input type="text" placeholder="Escribe algo" id="info">
+    <button onclick="guardar()">Guardar</button>
+    <button onclick="borrar()">Borrar</button>
+    <script>
+        function guardar(){
+            let info = document.getElementById("info").value;
+            localStorage.setItem("informacion", info);
+        }
+    </script>
+</body>
+</html>
