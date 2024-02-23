@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+</head>
+<body>
+    <p>Tareas</p>
+    <ul id="lista"></ul>
+    <input id="mitarea" type="text" placeholder="Nueva tarea">
+    <button type="button" onclick="anadirTarea()">Añadir</button>
+    <script>
+        function cargaPagina(){
+            
+        }
+        function anadirTarea(){
+            mitarea = document.getElementById("mitarea").value;
+            var lista = document.getElementById("lista");
+            var tareas = document.createElement("li");
+            tareas.textContent =  mitarea;
+            lista.appendChild(tareas);
+        }
+        
+        window.onload = cargaPagina();
+    </script>
+</body>
+</html>
