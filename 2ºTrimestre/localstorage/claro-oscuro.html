@@ -21,10 +21,8 @@
     <button id="tclaro" onclick="temaClaro()">Modo Claro</button>
     <button id="toscuro" onclick="temaOscuro()">Modo Oscuro</button>
     <script>
-        const tclaro = document.getElementById('tclaro');
-        const toscuro = document.getElementById('toscuro');
         function cargaPagina(){
-            const guardarTema = localStorage.setItem("tema");
+            let guardarTema = localStorage.getItem("tema");
             if(guardarTema === 'oscuro'){
                 temaOscuro();
             }
