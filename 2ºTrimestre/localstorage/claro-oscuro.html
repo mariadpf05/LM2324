@@ -22,8 +22,8 @@
     <button id="toscuro" onclick="temaOscuro()">Modo Oscuro</button>
     <script>
         function cargaPagina(){
-            let guardarTema = localStorage.getItem("tema");
-            if(guardarTema === 'oscuro'){
+            let temaGuardado = localStorage.getItem("tema");
+            if(temaGuardado === 'oscuro'){
                 temaOscuro();
             }
             else{
