@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claro y oscuro</title>
+    <style>
+        #tclaro{
+            background-color: white;
+            color: black;
+        }
+        #toscuro{
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cambiar tema de la página</h1>
+    <p id="parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident dolorem repellat perferendis fuga expedita deserunt, recusandae optio a pariatur, impedit nisi suscipit non incidunt voluptate culpa illum esse eius similique!</p>
+    <button id="tclaro" onclick="temaClaro()">Modo Claro</button>
+    <button id="toscuro" onclick="temaOscuro()">Modo Oscuro</button>
+    <script>
+        const tclaro = document.getElementById('tclaro');
+        const toscuro = document.getElementById('toscuro');
+        function cargaPagina(){
+            const guardarTema = localStorage.setItem("tema");
+            if(guardarTema === 'oscuro'){
+                temaOscuro();
+            }
+            else{
+                temaClaro();
+            }
+        }
+        function temaClaro(){
+            document.body.style.backgroundColor = 'white';
+            document.body.style.color = 'black';
+            localStorage.setItem('tema', 'claro');
+        }
+        function temaOscuro(){
+            document.body.style.backgroundColor = 'black';
+            document.body.style.color = 'white';
+            localStorage.setItem('tema', 'oscuro');
+        }
+        window.onload = cargaPagina;
+    </script>
+</body>
+</html>

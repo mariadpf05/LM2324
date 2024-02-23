@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Tema</title>
+    <style>
+        /* Estilos para el tema claro */
+        body.light {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Estilos para el tema oscuro */
+        body.dark {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selector de Tema</h1>
+    <button onclick="applyTheme('light')">Tema Claro</button>
+    <button onclick="applyTheme('dark')">Tema Oscuro</button>
+
+    <script>
+        // Función para aplicar el tema seleccionado
+        function applyTheme(theme) {
+            document.body.className = theme; // Cambiar la clase del body
+            localStorage.setItem("theme", theme); // Guardar el tema seleccionado
+        }
+
+        // Al cargar la página, leer el tema guardado en localStorage y aplicarlo automáticamente
+        window.onload = function() {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme) {
+                applyTheme(savedTheme);
+            }
+        };
+    </script>
+</body>
+</html>
