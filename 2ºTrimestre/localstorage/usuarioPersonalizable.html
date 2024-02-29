@@ -24,6 +24,11 @@
     </table>
     <script type="text/javascript">
         var tamano=100;// TamaNo inicial
+        var preferencias = {
+            fuente: "Times New Roman",
+            tamano: 100,
+            color: "#000"
+        }
         function aumenta(){
           tamano+=25;
           document.getElementById("parrafo").style.fontSize = tamano+"%"; // aumentamos un 25% el tamaño
@@ -39,7 +44,6 @@
           document.getElementById("parrafo").style.fontFamily = font.value; // Cambiamos la fuente del parrafo
         }
         function guardar(){
-            localStorage.setItem("preferencias", preferencias);
             localStorage.setItem("tamaño", tamano);
             localStorage.setItem("fuente", document.getElementById('parrafo').style.fontFamily);
             localStorage.setItem("color", document.getElementById('parrafo').style.color);
