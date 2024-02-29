@@ -39,6 +39,7 @@
           document.getElementById("parrafo").style.fontFamily = font.value; // Cambiamos la fuente del parrafo
         }
         function guardar(){
+            localStorage.setItem("preferencias", preferencias);
             localStorage.setItem("tamaño", tamano);
             localStorage.setItem("fuente", document.getElementById('parrafo').style.fontFamily);
             localStorage.setItem("color", document.getElementById('parrafo').style.color);
