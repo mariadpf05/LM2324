@@ -1,53 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Tareas</title>
+<meta charset="UTF-8">
+<title>Ejercicio 4: Eliminar Tareas</title>
+<script>
+function agregarTarea() {
+    const tarea = document.getElementById('tarea').value;
+    if (tarea) {
+        const lista = document.getElementById('listaTareas');
+        const elemento = document.createElement('li');
+        elemento.textContent = tarea;
+        
+        const botonEliminar = document.createElement('button');
+        botonEliminar.textContent = 'Eliminar';
+        botonEliminar.onclick = function() {
+            lista.removeChild(elemento);
+            guardarTareas();
+        };
+        
+        elemento.appendChild(botonEliminar);
+        lista.appendChild(elemento);
+
+        guardarTareas();
+    }
+}
+
+function guardarTareas() {
+    const tareas = [];
+    document.querySelectorAll('#listaTareas li').forEach(function(item) {
+        tareas.push(item.firstChild.textContent);
+    });
+    localStorage.setItem('tareas', JSON.stringify(tareas));
+}
+
+function cargarTareas() {
+    const tareas = JSON.parse(localStorage.getItem('tareas'));
+    if (tareas) {
+        const lista = document.getElementById('listaTareas');
+        tareas.forEach(function(tarea) {
+            const elemento = document.createElement('li');
+            elemento.textContent = tarea;
+            
+            const botonEliminar = document.createElement('button');
+            botonEliminar.textContent = 'Eliminar';
+            botonEliminar.onclick = function() {
+                lista.removeChild(elemento);
+                guardarTareas();
+            };
+            
+            elemento.appendChild(botonEliminar);
+            lista.appendChild(elemento);
+        });
+    }
+}
+
+window.onload = cargarTareas;
+</script>
 </head>
 <body>
-    <!--No me sale-->
-    <h1>Bienvenido a la lista de tus tareas</h1>
-    <input type="text" id="tarea" placeholder="Nueva tarea">
-    <ul id="lista">
-    </ul>
-    <button type="button" onclick="anadirTarea()">Añadir tarea</button>
-    <button onclick="borrarTarea()">Borrar tarea</button>
 
-    <script>
-        var problemas=[];
-        function anadirTarea() {
-            var tarea = document.getElementById("tarea").value
-            var lista = document.getElementById("lista");
-            var elemento = document.createElement("li");
-            elemento.textContent = tarea; // Observa en la consola lista y lista.children
-            lista.appendChild(elemento);
-            problemas.push(elemento);
-            var cadena="";
-            for (var i=0;i<problemas.length;i++){
-                cadena = cadena + problemas[i].textContent + ",";
-            }
-            // Al finalizar el for en cadena tengo mi lista de tareas
-            localStorage.setItem("problemas", cadena);
-        }
-        function borrarTarea(){
-            
-        }
-        function cargarPagina(){
-            let cadenaTareas = localStorage.getItem("problemas")
-            if (cadenaTareas!=null)
-            {
-                // Tengo tareas pendientes
-                var elemento = document.createElement("li");
-                var lista = document.getElementById("lista");
-                elemento.textContent = cadenaTareas;
-                lista.appendChild(elemento);
-            }
-            else{
-                // No tengo nada que mostrar
-            }
-        }
-        window.onload = cargarPagina();
-    </script>
+<input type="text" id="tarea">
+<button onclick="agregarTarea()">Agregar Tarea</button>
+
+<ul id="listaTareas"></ul>
+
 </body>
 </html>
