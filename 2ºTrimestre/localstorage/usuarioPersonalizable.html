@@ -42,7 +42,7 @@
         }
         function cambiarFuente(font) {
           document.getElementById("parrafo").style.fontFamily = font.value; // Cambiamos la fuente del parrafo
-          preferencias.fuente = font.value
+          preferencias.fuente = font.value;
         }
         function guardar(){
             localStorage.setItem("preferencias", JSON.stringify(preferencias));
@@ -51,7 +51,19 @@
             //localStorage.setItem("color", document.getElementById('parrafo').style.color);
         }
         function cargarDatos(){
-            var objeto = localStorage.getItem("preferencias");
+            var cadena = localStorage.getItem("preferencias");
+            if (cadena!=null){
+                preferencias = JSON.parse(cadena); //Convierte cadena a objeto
+                document.getElementById("parrafo").style.color = preferencias.color;
+                document.getElementById("parrafo").style.fontFamily = preferencias.fuente;
+                document.getElementById("parrafo").style.fontSize = preferencias.tamano + "%"; 
+            }
+            else{
+                preferencias.tamano = 100;
+                preferencias.fuente = "Times New Roman";
+                preferencias.color = "#000";
+            }
+        }
             /* tamano = localStorage.getItem("tamaño");
             if (tamano !=null){
                 document.getElementById('parrafo').style.fontSize = tamano+"%";
@@ -74,7 +86,6 @@
                 document.getElementById('parrafo').style.color = "#000"; //Negro
             }
             */
-        }
         window.onload = cargarDatos();
     </script>
 </body>
