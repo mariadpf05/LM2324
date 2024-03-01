@@ -3,43 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduce tu peso</title>
+    <title>Fitness</title>
     <style>
-        img{
-            width: 640px;
-            height: 427px;
+        .contenedor{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
-        p, h1{
-            text-align: center;
+        input {
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-
     </style>
 </head>
 <body>
-    <h1>Bienvenido a GuardaPeso</h1>
-    <p><img src="peso.jpg" alt="fitness"></p>
-    <p id="nodatos"></p>
-    <p><label id="peso">Introduce tu peso:</label></p>
-    <p><input type="text"><button onclick="guardar()">Guardar</button></p>
+    <div class="contenedor">
+        <h1>Bienvenido a TuFitness</h1>
+        <img src="peso.jpg" alt="">
+        <input type="text" id="pesoActual">
+        <button onclick="guardar()">Guardar progreso</button>
+        <p id="parrafo"></p>
+    </div>
     <script>
-        function cargar(){ 
-            let cadena = localStorage.getItem("ultimoPeso"); 
-            if(cadena!=null){ 
-                //se peso antes
-                document.getElementById("peso").innerHTML="La última vez pesaba "+cadena; 
-            } 
-            else{ 
-                //Es la primera vez que guarda su peso
-                document.getElementById("nodatos").innerHTML="Aún no te habías pesado." 
-            } 
-            localStorage.setItem("ultimoPeso",) 
-        } 
-
+        let pesoAnterior=100000; // Valor inicial
         function guardar(){
-            let info = document.getElementById("info").value;
-            localStorage.setItem("ultimoPeso", info);
+            let pesoActual = document.getElementById("pesoActual").value;
+            if (pesoActual!=""){
+                // Tiene algo
+                localStorage.setItem("peso", pesoActual);
+                if (pesoActual>pesoAnterior){
+                    document.getElementById("parrafo").innerHTML = "Hay que reducir carbohidratos"
+                }
+                if (pesoActual==pesoAnterior)
+                {
+                    document.getElementById("parrafo").innerHTML = "Pesas lo mismo que la última vez"
+                }
+                if (pesoActual<pesoAnterior)
+                {
+                    document.getElementById("parrafo").innerHTML = "¡Sigue así!";
+                }
+            }
+            else{
+                document.getElementById("parrafo").innerHTML = "Tienes que introducir tu peso en kg"
+            }
         }
-        window.onload=cargar(); 
+        function cargar(){
+            var almacenado = localStorage.getItem("peso");
+            if (almacenado!=null)
+            {
+                pesoAnterior = parseFloat(almacenado);
+                document.getElementById("parrafo").innerHTML="Tu peso anterior era de " + pesoAnterior + "kg"
+            }
+        }
+        window.onload=cargar();
     </script>
 </body>
 </html>
