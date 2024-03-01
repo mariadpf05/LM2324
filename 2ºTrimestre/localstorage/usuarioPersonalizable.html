@@ -23,33 +23,36 @@
       </tr>
     </table>
     <script type="text/javascript">
-        var tamano=100;// TamaNo inicial
         var preferencias = {
             fuente: "Times New Roman",
             tamano: 100,
             color: "#000"
-        }
+        };
         function aumenta(){
-          tamano+=25;
-          document.getElementById("parrafo").style.fontSize = tamano+"%"; // aumentamos un 25% el tamaño
+          preferencias.tamano+=25;
+          document.getElementById("parrafo").style.fontSize = preferencias.tamano+"%"; // aumentamos un 25% el tamaño
         }
         function disminuye(){
-          tamano-=25;;
-          document.getElementById("parrafo").style.fontSize = tamano+"%"; //decrementamos un 25% el tamaño
+          preferencias.tamano-=25;;
+          document.getElementById("parrafo").style.fontSize = preferencias.tamano+"%"; //decrementamos un 25% el tamaño
         }
         function cambiarColor(){
           document.getElementById("parrafo").style.color = document.getElementById("color").value; //Cambiamos el color del parrafo
+          preferencias.color = document.getElementById("color").value;
         }
         function cambiarFuente(font) {
           document.getElementById("parrafo").style.fontFamily = font.value; // Cambiamos la fuente del parrafo
+          preferencias.fuente = font.value
         }
         function guardar(){
-            localStorage.setItem("tamaño", tamano);
-            localStorage.setItem("fuente", document.getElementById('parrafo').style.fontFamily);
-            localStorage.setItem("color", document.getElementById('parrafo').style.color);
+            localStorage.setItem("preferencias", JSON.stringify(preferencias));
+            //localStorage.setItem("tamaño", tamano);
+            //localStorage.setItem("fuente", document.getElementById('parrafo').style.fontFamily);
+            //localStorage.setItem("color", document.getElementById('parrafo').style.color);
         }
         function cargarDatos(){
-            tamano = localStorage.getItem("tamaño");
+            var objeto = localStorage.getItem("preferencias");
+            /* tamano = localStorage.getItem("tamaño");
             if (tamano !=null){
                 document.getElementById('parrafo').style.fontSize = tamano+"%";
             }
@@ -70,6 +73,7 @@
             else {
                 document.getElementById('parrafo').style.color = "#000"; //Negro
             }
+            */
         }
         window.onload = cargarDatos();
     </script>
