@@ -16,11 +16,8 @@
             alert("Bienvenido "+valor);
         }
         function guardar(){
-            let info = document.getElementById("info").value;
-            localStorage.setItem("informacion", info);
-        }
-        function borrar(){
-            localStorage.clear()
+            let info = document.getElementById("peso").value;
+            localStorage.setItem("informacion", peso);
         }
         window.onload = cargaPagina();
     </script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce tu peso</title>
+    <style>
+        img{
+            width: 640px;
+            height: 427px;
+        }
+        p, h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a GuardaPeso</h1>
+    <p><img src="peso.jpg" alt="fitness"></p>
+    <p id="nodatos"></p>
+    <p><label id="peso">Introduce tu peso:</label></p>
+    <p><input type="text"><button onclick="guardar()">Guardar</button></p>
+    <script>
+        function cargar(){ 
+            let cadena = localStorage.getItem("ultimoPeso"); 
+            if(cadena!=null){ 
+                //se peso antes
+                document.getElementById("peso").innerHTML="La última vez pesaba "+cadena; 
+            } 
+            else{ 
+                //Es la primera vez que guarda su peso
+                document.getElementById("nodatos").innerHTML="Aún no te habías pesado." 
+            } 
+            localStorage.setItem("ultimoPeso",) 
+        } 
+
+        function guardar(){
+            let info = document.getElementById("info").value;
+            localStorage.setItem("ultimoPeso", info);
+        }
+        window.onload=cargar(); 
+    </script>
+</body>
+</html>
