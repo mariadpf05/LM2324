@@ -22,23 +22,24 @@
     <button id="toscuro" onclick="temaOscuro()">Modo Oscuro</button>
     <script>
         function cargaPagina(){
-            let temaGuardado = localStorage.getItem("tema");
+            let temaGuardado = localStorage.getItem("tema"); //obtiene el valor almacenado en el localStorage bajo la clave "tema".
             if(temaGuardado == 'oscuro'){
                 temaOscuro();
             }
             else{
                 temaClaro();
             }
+//verifica si el tema guardado es "oscuro". Si el tema guardado es "oscuro", se llama a la función temaOscuro(), de lo contrario, se llama a temaClaro().
         }
         function temaClaro(){
             document.body.style.backgroundColor = 'white';
             document.body.style.color = 'black';
-            localStorage.setItem('tema', 'claro');
+            localStorage.setItem('tema', 'claro'); //guarda el tema seleccionado ("claro") en el localStorage.
         }
         function temaOscuro(){
             document.body.style.backgroundColor = 'black';
             document.body.style.color = 'white';
-            localStorage.setItem('tema', 'oscuro');
+            localStorage.setItem('tema', 'oscuro'); //guarda el tema seleccionado ("oscuro") en el localStorage.
         }
         window.onload = cargaPagina();
     </script>

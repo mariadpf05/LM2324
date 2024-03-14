@@ -11,13 +11,17 @@
     <button onclick="borrar()">Borrar</button>
     <script>
         function cargaPagina(){
-            let valor=localStorage.getItem("informacion")
+            let valor=localStorage.getItem("informacion");
             if (valor!=null)
             alert("Bienvenido "+valor);
         }
         function guardar(){
             let info = document.getElementById("peso").value;
-            localStorage.setItem("informacion", peso);
+            localStorage.setItem("informacion", info);
+        }
+        function borrar(){
+            localStorage.removeItem("informacion");
+            alert("Información borrada");
         }
         window.onload = cargaPagina();
     </script>
