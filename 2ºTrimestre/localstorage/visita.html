@@ -10,8 +10,10 @@
     <script>
         function visita(){
             let conexion=localStorage.getItem("conexion")
-            if (conexion!=null){
+//Se obtiene el valor asociado a la clave "conexion" en el almacenamiento local. Esto representa el número de visitas que ha realizado el usuario.
+            if (conexion!=null){ //Comprobamos si ha visitado la página
                 conexion = parseInt(conexion);
+//Si hay una conexión previa, se convierte el valor de "conexion" a un entero utilizando parseInt(), ya que los valores del localStorage se almacenan como cadenas.
                 document.getElementById("visita").innerHTML="Has visitado esta página "+conexion+" veces.";
                 conexion = conexion+1;
                 localStorage.setItem("conexion", conexion);
