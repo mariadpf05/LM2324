@@ -10,9 +10,12 @@
     <script> 
         function cargar(){ 
             let cadena = localStorage.getItem("ultimaFechaHora"); 
+// Se obtiene la cadena que representa la última fecha y hora guardada en el localStorage bajo la clave "ultimaFechaHora".
             var hoy = new Date(); 
+//Se crea un nuevo objeto Date que representa la fecha y hora actuales.
             var ahora = hoy.toLocaleString(); 
-            if(cadena!=null){ 
+//Se convierte la fecha y hora actuales en una cadena en formato local utilizando el método toLocaleString().
+            if(cadena!=null){ //Se ha guardo una fecha??
                 //se conecto alguna vez 
                 document.getElementById("texto").innerHTML="Se conectó la última vez el día "+cadena; 
             } 
@@ -21,6 +24,7 @@
                 document.getElementById("texto").innerHTML="Aún no te habías conectado." 
             } 
             localStorage.setItem("ultimaFechaHora", ahora) 
+//e guarda la fecha y hora actuales en el localStorage bajo la clave "ultimaFechaHora" para ser utilizada la próxima vez que se cargue la página.
         } 
         window.onload=cargar(); 
     </script> 

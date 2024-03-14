@@ -16,11 +16,11 @@
             alert("Bienvenido "+valor);
         }
         function guardar(){
-            let info = document.getElementById("peso").value;
+            let info = document.getElementById("info").value;
             localStorage.setItem("informacion", info);
         }
         function borrar(){
-            localStorage.removeItem("informacion");
+            localStorage.clear("informacion");
             alert("Información borrada");
         }
         window.onload = cargaPagina();
