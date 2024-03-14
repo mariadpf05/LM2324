@@ -6,7 +6,7 @@
     <title>Suma Pares</title>
 </head>
 <body>
-    <h1>Suma Impares</h1>
+    <h1>Suma Pmpares</h1>
     <p id="resultado"></p>
     <script>
         let numeros=[1,2,3,4,5,6,7,8,9,10];
@@ -16,6 +16,9 @@
         for (var i=0;i<numeros.length;i++){
         if (numeros[i]%2 == 0.0)
             total = total + numeros[i];
+//Dentro del bucle, se verifica si el elemento actual en la posición i del array numeros es un número par. 
+//Esto se hace calculando el resto de la división (%) del elemento por 2. 
+//Si el resto es igual a 0, significa que el número es par y se ejecuta el código dentro del bloque if.
         }
         document.getElementById("resultado").innerHTML = total;
     }
