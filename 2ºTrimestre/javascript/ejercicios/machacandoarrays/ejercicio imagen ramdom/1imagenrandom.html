@@ -18,6 +18,17 @@ Nombre archivo: imagenrandom.html-->
             let numeros = random (0,archivos.length -1);
             document.getElementById("aleatoria").src ="imagenes/" + archivos[numeros];
         }
+//random(min, max):Esta función toma dos parámetros, min y max, que representan el rango en el que se desea generar un número aleatorio.
+//Math.random() devuelve un número decimal pseudoaleatorio entre 0 (inclusive) y 1 (exclusivo).
+//Math.floor() redondea el número hacia abajo al entero más cercano.
+//Se multiplica el resultado de Math.random() por la diferencia entre max y min, y luego se suma min.
+//Finalmente, se devuelve el número entero resultante, que está dentro del rango especificado por min y max.
+
+//Esta función genera una imagen aleatoria entre las disponibles en la carpeta "imagenes/" y la muestra en un elemento de imagen HTML con el ID "aleatoria".
+//Se invoca la función random(min, max) para generar un número aleatorio entre 0 y la longitud del array archivos menos 1.
+//Este número se utiliza como índice para seleccionar un nombre de archivo aleatorio del array archivos.
+//Se asigna la ruta de la imagen seleccionada al atributo src del elemento de imagen HTML con el ID "aleatoria".
+//Al llamar a esta función, se actualizará la imagen mostrada en la página con una imagen aleatoria de la lista proporcionada en el array archivos.
     </script>
 </body>
 </html>
