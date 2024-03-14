@@ -25,7 +25,9 @@
 		    document.getElementById("estado").innerHTML = "Prueba completada"; /* En el estado decimos que hemos completado el cuestionario */
 		    pos = 0;
 		    correctas = 0;
-		    return false;
+//Se reinician las variables pos y correctas para que el cuestionario pueda ser reiniciado.
+			return false;
+//return false;: Se devuelve false para indicar que la función ha terminado y no es necesario continuar con el código restante.
 	    }
 	    document.getElementById("estado").innerHTML = "Pregunta "+(pos+1)+" de "+preguntas.length; /* Mostramos el progreso en el cuestionario */
 	    pregunta = preguntas[pos][0]; /* Introducimos en la variable global pregunta la pregunta */
@@ -49,7 +51,7 @@
         {
 		    correctas+=1; /* Contamos que ha acertado */
 	    }
-	    pos++;
+	    pos++;  //Pasamos a la siguiente pregunta
 	    hacerPregunta(); /* Hacemos pregunta */
     }
     window.addEventListener("load", hacerPregunta, false);
