@@ -54,7 +54,7 @@
             var cadena = localStorage.getItem("preferencias");
 //Se obtiene la cadena que representa las preferencias del usuario del localStorage bajo la clave "preferencias".
             if (cadena!=null){
-                preferencias = JSON.parse(cadena); //Convierte cadena a objeto
+                preferencias = JSON.parse(cadena); // Convertimos el preferencias en un objeto Javascript
 // Se utiliza JSON.parse() para convertir la cadena JSON recuperada del localStorage en un objeto JavaScript. 
 //Se establecen las preferencias del usuario
                 document.getElementById("parrafo").style.color = preferencias.color;

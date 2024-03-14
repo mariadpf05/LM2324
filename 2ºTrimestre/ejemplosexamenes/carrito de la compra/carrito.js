@@ -19,7 +19,7 @@ function anadir(producto){
      objeto['uds'] += 1; // Añado unidad
      carro[producto] = objeto;
      document.getElementById("id"+producto).value = objeto['uds'];
-     localStorage.setItem("carro", JSON.stringify(carro));
+     localStorage.setItem("carro", JSON.stringify(carro));  // Almacenamos en localStorage el carro
      refrescar();
 }
 function quitar(producto){
@@ -53,4 +53,6 @@ function refrescar(){
         }
     }
     document.getElementById("datos").innerHTML = "Total: " + total.toFixed(2) + "€"; // Escribimos el total
+//Es una cadena de texto que se concatena para formar el contenido que se mostrará en el elemento seleccionado.
+//total.toFixed(2) es una forma de formatear el número total con dos decimales. Esto asegura que el total se muestre con precisión monetaria.
 }
