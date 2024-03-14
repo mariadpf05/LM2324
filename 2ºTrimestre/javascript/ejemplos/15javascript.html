@@ -10,18 +10,18 @@
     <button id="boton" onclick="comprueba()">Probar!</button>
     <p id="resultado"></p>
     <script>
-        var numero=8;
+        var numero=8;  //el numero a adivinar será el 8
         function comprueba() {
-            var entrada=document.getElementById("entrada").value;
-            if (entrada>numero)
+            var entrada=document.getElementById("entrada").value;  //Variable entrada, será el número que escribamos en el input
+            if (entrada>numero)  //Si el nº introducio es mayor que 8
             {
                 document.getElementById("resultado").innerHTML = "Lo siento, el número era menor...";
             }
-            else if(entrada==numero)
+            else if(entrada==numero)  //Si el nº introducido es 8
             {
                 document.getElementById("resultado").innerHTML = "¡Acertaste!";
             }
-            else {
+            else {  //Si el nº introducido era menor que 8
             document.getElementById("resultado").innerHTML = "Lo sentimos, el número era mayor...";
             }
         }
