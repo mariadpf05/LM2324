@@ -5,56 +5,67 @@
 <title>Ejercicio 3 y 4: Tareas</title>
 <script>
 function agregarTarea() {
-    const tarea = document.getElementById('tarea').value;
-    if (tarea) {
-        const lista = document.getElementById('listaTareas');
-        const elemento = document.createElement('li');
-        elemento.textContent = tarea;
+    const tarea = document.getElementById('tarea').value;  //Se obtiene el valor del input de la tarea utilizando su ID ('tarea').
+    if (tarea) {  //Comprobamos si hay tareas
+        const lista = document.getElementById('listaTareas');  //Se obtiene la referencia al elemento de lista (ul) donde se agregarán las tareas.
+        const elemento = document.createElement('li');  // Se crea un nuevo elemento de lista (li) para la tarea.
+        elemento.textContent = tarea;  // Se asigna el texto de la tarea al contenido de texto del elemento de lista.
         
-        const botonEliminar = document.createElement('button');
-        botonEliminar.textContent = 'Eliminar';
-        botonEliminar.onclick = function() {
-            lista.removeChild(elemento);
-            guardarTareas();
+        const botonEliminar = document.createElement('button');  //Se crea un botón para eliminar la tarea.
+        botonEliminar.textContent = 'Eliminar';  //Se establece el texto del botón como "Eliminar".
+        botonEliminar.onclick = function() {  // Se asigna una función anónima al evento onclick del botón de eliminar.
+            lista.removeChild(elemento);  //Se elimina el elemento de lista (li) correspondiente a la tarea.
+            guardarTareas();  //Se actualiza la lista de tareas guardadas
         };
         
         elemento.appendChild(botonEliminar);
         lista.appendChild(elemento);
-
+//Se agrega el elemento de lista (junto con el botón de eliminar) a la lista de tareas (ul).
         guardarTareas();
     }
 }
 
 function guardarTareas() {
-    const tareas = [];
+    const tareas = []; //Creamos un array para guardar las tareas
     document.querySelectorAll('#listaTareas li').forEach(function(item) {
+//Se seleccionan todos los elementos li dentro del elemento con ID listaTareas. 
+//Luego, se itera sobre cada uno de estos elementos utilizando el método forEach.
         tareas.push(item.firstChild.textContent);
+    
+//Se agrega la tarea
+//Para cada elemento li, se accede a su primer hijo (que es el nodo de texto) y se obtiene su contenido de texto con textContent. 
+//Esto representa el texto de la tarea.
     });
     localStorage.setItem('tareas', JSON.stringify(tareas));
+//Se guarda el arreglo de tareas en el localStorage bajo la clave 'tareas'. 
+//Antes de hacer esto, el arreglo se convierte a una cadena JSON utilizando JSON.stringify() 
+//para que pueda ser almacenado en el localStorage.
 }
 
 function cargarTareas() {
-    const tareas = JSON.parse(localStorage.getItem('tareas'));
-    if (tareas) {
+    const tareas = JSON.parse(localStorage.getItem('tareas')); //Se obtiene la cadena tareas y se convierte en objeto con JSOn.parse
+    if (tareas) {  //si hay tareas guardadas
         const lista = document.getElementById('listaTareas');
+//e obtiene la referencia al elemento de lista (ul) donde se agregarán las tareas.
+//Se itera sobre cada tarea del array utilizando el método forEach().
         tareas.forEach(function(tarea) {
-            const elemento = document.createElement('li');
-            elemento.textContent = tarea;
+            const elemento = document.createElement('li'); //Se crea un nuevo elemento de lista (li) para la tarea.
+            elemento.textContent = tarea; //Se asigna el texto de la tarea al contenido de texto del elemento de lista.
             
-            const botonEliminar = document.createElement('button');
-            botonEliminar.textContent = 'Eliminar';
-            botonEliminar.onclick = function() {
+            const botonEliminar = document.createElement('button'); //Lo mismo que en añadir
+            botonEliminar.textContent = 'Eliminar';  
+            botonEliminar.onclick = function() { 
                 lista.removeChild(elemento);
                 guardarTareas();
             };
             
-            elemento.appendChild(botonEliminar);
-            lista.appendChild(elemento);
+            elemento.appendChild(botonEliminar);  //se agrega el botón eliminar a los elementos de la lista
+            lista.appendChild(elemento);  //se agrega el elemento de la lista a la lista de tareas
         });
     }
 }
 
-window.onload = cargarTareas;
+window.onload = cargarTareas();
 </script>
 </head>
 <body>
