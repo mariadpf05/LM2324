@@ -1,11 +1,17 @@
 function validar(elementos){
-    let estanCorrectos = true;
+    let estanCorrectos = true;  //Se declara la variable estanCorrectos con el valor true (dira si los campos están llenos y son válidos)
     for (var i=0;i<elementos.length;i++){
         document.getElementById("campo"+(i+1).toString()).innerHTML = ""; // Por defecto el campo está OK       
         if (elementos[i].value == "" || (i==6 && !elementos[i].checked)){
             // Si el campo está vacío o (el campo es la casilla de verificación y no está marcada) entonces ...
             document.getElementById("campo"+(i+1).toString()).innerHTML = "El campo " + elementos[i].id + " está vacío";
             estanCorrectos = false;
+//Se establece el contenido del elemento HTML con el ID "campo" + (i+1).toString() a una cadena vacía. 
+//Esto se hace para borrar cualquier mensaje de error previamente mostrado.
+//Se verifica si el valor del elemento actual (elementos[i].value) está vacío ("") o si es una casilla de verificación (checkbox) que no está marcada.
+//Si alguna de estas condiciones se cumple, se establece un mensaje de error en el elemento HTML correspondiente al campo afectado. 
+//El mensaje indica que el campo está vacío.
+//Además, se cambia el valor de estanCorrectos a false para indicar que al menos uno de los campos no está lleno o no es válido.
         }
         
     }
@@ -63,6 +69,12 @@ function validarDNI(){
 function limpia(){
     let cadena = document.getElementById("cadena").value;
     let cadenaSinEspacios = cadena.replace(/ /g,"");
+//Se utiliza el método replace() para eliminar todos los espacios en blanco de la cadena utilizando una expresión regular / /g que busca todos los espacios en blanco y los reemplaza con una cadena vacía. 
+//El resultado se almacena en la variable cadenaSinEspacios.
     let cadenaLimpia = cadenaSinEspacios.toUpperCase();
+//Se utiliza el método toUpperCase() para convertir todos los caracteres de la cadena a mayúsculas. 
+//El resultado se almacena en la variable cadenaLimpia.
     document.getElementById(resultado).innerHTML =  cadenaLimpia;
+// Se actualiza el contenido del elemento HTML con el ID "resultado" con el valor de cadenaLimpia. 
+//Esto mostrará la cadena limpia y en mayúsculas en la página web.
 }
