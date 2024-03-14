@@ -43,7 +43,7 @@ function guardarTareas() {
 }
 
 function cargarTareas() {
-    const tareas = JSON.parse(localStorage.getItem('tareas')); //Se obtiene la cadena tareas y se convierte en objeto con JSOn.parse
+    const tareas = JSON.parse(localStorage.getItem('tareas')); //Se obtiene el objeto tareas y se convierte en una cadena con JSOn.parse
     if (tareas) {  //si hay tareas guardadas
         const lista = document.getElementById('listaTareas');
 //e obtiene la referencia al elemento de lista (ul) donde se agregarán las tareas.

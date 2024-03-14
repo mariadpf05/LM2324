@@ -45,20 +45,23 @@
           preferencias.fuente = font.value;
         }
         function guardar(){
-            localStorage.setItem("preferencias", JSON.stringify(preferencias));
+            localStorage.setItem("preferencias", JSON.stringify(preferencias));  //JSON.stringify convierte las preferencias en una cadena antes de guardarlas
             //localStorage.setItem("tamaño", tamano);
             //localStorage.setItem("fuente", document.getElementById('parrafo').style.fontFamily);
             //localStorage.setItem("color", document.getElementById('parrafo').style.color);
         }
         function cargarDatos(){
             var cadena = localStorage.getItem("preferencias");
+//Se obtiene la cadena que representa las preferencias del usuario del localStorage bajo la clave "preferencias".
             if (cadena!=null){
                 preferencias = JSON.parse(cadena); //Convierte cadena a objeto
+// Se utiliza JSON.parse() para convertir la cadena JSON recuperada del localStorage en un objeto JavaScript. 
+//Se establecen las preferencias del usuario
                 document.getElementById("parrafo").style.color = preferencias.color;
                 document.getElementById("parrafo").style.fontFamily = preferencias.fuente;
                 document.getElementById("parrafo").style.fontSize = preferencias.tamano + "%"; 
             }
-            else{
+            else{ //Se establecen las preferencias predeterminadas
                 preferencias.tamano = 100;
                 preferencias.fuente = "Times New Roman";
                 preferencias.color = "#000";
