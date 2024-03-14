@@ -28,10 +28,10 @@
     <script>
         let pesoAnterior=100000; // Valor inicial
         function guardar(){
-            let pesoActual = document.getElementById("pesoActual").value;
+            let pesoActual = document.getElementById("pesoActual").value;  // Se obtiene el valor del peso actual ingresado por el usuario desde un elemento HTML con el ID "pesoActual".
             if (pesoActual!=""){
                 // Tiene algo
-                localStorage.setItem("peso", pesoActual);
+                localStorage.setItem("peso", pesoActual);  //Se guarda el peso actual en el localStorage bajo la clave "peso".
                 if (pesoActual>pesoAnterior){
                     document.getElementById("parrafo").innerHTML = "Hay que reducir carbohidratos"
                 }
@@ -49,14 +49,14 @@
             }
         }
         function cargar(){
-            var almacenado = localStorage.getItem("peso");
+            var almacenado = localStorage.getItem("peso");  //Se obtiene el valor del peso almacenado en el localStorage bajo la clave "peso".
             if (almacenado!=null)
             {
-                pesoAnterior = parseFloat(almacenado);
+                pesoAnterior = parseFloat(almacenado);  // Se convierte el valor almacenado a un número de punto flotante y se asigna a la variable pesoAnterior.
                 document.getElementById("parrafo").innerHTML="Tu peso anterior era de " + pesoAnterior + "kg"
             }
         }
-        window.onload=cargar();
+        window.onload=cargar();  //actualiza el contenedor
     </script>
 </body>
 </html>
