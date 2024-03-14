@@ -19,8 +19,10 @@ function mostrar(caja){
 }
 /* Versión con un solo boton */
 function ocultar_o_mostrar(caja){
-    if (document.getElementById(caja).style.visibility =="visible" || document.getElementById(caja).style.visibility =="")
+    if (document.getElementById(caja).style.visibility =="visible" || document.getElementById(caja).style.visibility ==""){
         document.getElementById(caja).style.visibility = "hidden";
-    else
+    }
+    else{
         document.getElementById(caja).style.visibility = "visible";
+    }
 }
