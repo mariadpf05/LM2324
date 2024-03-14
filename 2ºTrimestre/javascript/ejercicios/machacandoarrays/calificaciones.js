@@ -1,4 +1,4 @@
-var notas = [];
+var notas = []; //Creamos un array vacío
 
 function anadir(){
     let numero = parseFloat(document.getElementById("numero").value);
@@ -28,7 +28,9 @@ function calcularMedia(){
     let total = 0.0;
     for (var i=0; i<notas.length;i++){
         total = total+notas[i]; //total += notas[i]
+// En cada iteración del bucle, se suma el valor de la nota actual al total acumulado en la variable total.
     }
     total = total/notas.length;
+//Se divide el total acumulado entre el número total de notas en el array notas.
     document.getElementById("resultado").innerHTML = total.toFixed(2);
 }
