@@ -23,37 +23,46 @@
     <button id="btn-comprueba" onclick="comprueba()">Comprueba</button>
     <p id="resultado"></p>
     <script>
-        var numeroAzar;
-        var inicio;
+        var numeroAzar;  //Creamos una variable numeroAzar
+        var inicio;  //Creamos una variable inicio
         function generaNumero(){
             numeroAzar = Math.ceil(Math.random()*9).toString()
                     + Math.ceil(Math.random()*9).toString()
                     + Math.ceil(Math.random()*9).toString();
-            document.getElementById("secreto").innerHTML = numeroAzar;        
+//Genera un número aleatorio entre 0 y 9 (inclusive) utilizando Math.random(), luego lo multiplica por 9, y después redondea hacia arriba 
+//usando Math.ceil(). Después convierte este número en una cadena de texto usando .toString(). 
+//Esto genera el primer dígito del número aleatorio y lo guarda en la variable numeroAzar.  LO realiza 3 veces para generar un número de 3 cifras.
+            document.getElementById("secreto").innerHTML = numeroAzar; //Muestra el numero generado alazar en la página  
         } 
         function comenzar(){
-            inicio = new Date().getTime();
+            inicio = new Date().getTime();  
+//registra el tiempo actual en milisegundos en la variable inicio. 
+//Esto se utiliza para calcular cuánto tiempo ha pasado desde que se inició alguna acción en el código.
             generaNumero();
-            document.getElementById("btn-comenzar").style.display = "none";
-            document.getElementById("btn-comprueba").style.display = "block";
-            document.getElementById("numero").style.display = "block";
-            var recordActual = window.localStorage.getItem("record");
+            document.getElementById("btn-comenzar").style.display = "none";  //Oculta el botón
+            document.getElementById("btn-comprueba").style.display = "block";  //Muestra el botón
+            document.getElementById("numero").style.display = "block";  //Esto muestra un elemento HTML con el ID "numero" en la página.
+            var recordActual = window.localStorage.getItem("record");  //Contiene el record almacenado
             if (recordActual!=null)
                 document.getElementById("secreto").innerHTML = "El record actual está en " + recordActual + " segundos. <br>" + numeroAzar;
             document.getElementById("resultado").innerHTML = "";
         }
         function comprueba(){
-            let numero = document.getElementById("numero").value;
+            let numero = document.getElementById("numero").value;  //Añade a la variable numero el numero que hemos escrito
             if (numero == numeroAzar)
             {
-                let fin = new Date().getTime();
-                let diferencia = (fin-inicio)/1000;
+                let fin = new Date().getTime();  //Registra el tiempo actual en milisegundos en la variable fin.
+                let diferencia = (fin-inicio)/1000;  
+//Calcula la diferencia de tiempo entre el momento actual (fin) y el momento en que se inició el juego (inicio). La diferencia se convierte a segundos y se guarda en la variable diferencia.
                 document.getElementById("resultado").innerHTML = "Enhorabuena, acertaste en " + diferencia + " segundos";
                 var record = window.localStorage.getItem("record");
+//Obtiene el record actual del almacenamiento local del navegador y lo guarda en la variable record
                 if (record!=null){
                     var recordReal = parseFloat(record);
+// Convierte el valor del record actual a un número de coma flotante y lo guarda en la variable recordReal.
                     if (diferencia<recordReal){
                         window.localStorage.setItem("record",diferencia.toString());
+//Si el tiempo actual es menor que el record actual, actualiza el record en el almacenamiento local con el nuevo tiempo.
                         document.getElementById("resultado").innerHTML += "¡Nuevo record!";
                     }
                     
@@ -65,17 +74,24 @@
                 document.getElementById("btn-comenzar").style.display = "block";
                 document.getElementById("btn-comprueba").style.display = "none";
                 document.getElementById("numero").style.display = "none";
+//Muestra el botón de inicio de nuevo juego (btn-comenzar), 
+//oculta el botón de comprobación (btn-comprueba) y 
+//oculta el campo de entrada de números (numero).
 
             }
             else {
                 // Miramos coincidencias
-                let i=0, coincidencias=0;
+                let i=0, coincidencias=0; 
+//Inicializa las variables i y coincidencias para contar las coincidencias entre los dígitos del número ingresado y el número aleatorio.
                 while (i<numeroAzar.length && i<numero.length){
+//Este bucle recorre cada dígito de ambos números (numeroAzar y numero) y cuenta las coincidencias en la misma posición.
                     if (numeroAzar[i]==numero[i])
                         coincidencias+=1;
-                    i++;
+//Si los dígitos en la misma posición son iguales, se incrementa el contador de coincidencias.
+                    i++;  
                 }
-                document.getElementById("resultado").innerHTML += "Tu propuesta " + numero + " coincide en " + coincidencias + " cifras<br>";         
+                document.getElementById("resultado").innerHTML += "Tu propuesta " + numero + " coincide en " + coincidencias + " cifras<br>"; 
+//Muestra un mensaje en el elemento HTML "resultado", indicando cuántos dígitos coinciden entre el número ingresado y el número aleatorio.        
             }
         }
     </script>
