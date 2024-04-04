@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9 JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("li").each(function(){
+                $(this).add("img").attr("src","foto.jpeg");
+        });
+    });     
+    </script>
+</head>
+<body>
+    <!--Realiza una página web con una lista de enlaces. Utiliza jQuery para adicionar a todos y 
+    cada uno de los enlaces la imagen de un icono de descarga tomada de iconarchive.com.-->
+    <ul>
+        <li> <a href="">Elemento 1</a></li>
+        <li> <a href="">Elemento 2</a></li>
+        <li> <a href="">Elemento 3</a></li>
+        <li> <a href="">Elemento 4</a></li>
+    </ul>
+</body>
+</html>

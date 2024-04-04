@@ -7,7 +7,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-        
+            $("#enc").html(
+                $("h1,h2").length
+            );
+            $("#par").html(
+                $("p").length
+            );
+            $("#enl").html(
+                $("a").length
+            );
+            $("#img").html(
+                $("img").length
+            );
         });
     </script>
 </head>
@@ -17,10 +28,10 @@
     <h1>Encabezado 1</h1>
     <h1>Encabezado 1</h1>
     <h2>Encabezado 2</h2>    
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa aspernatur quasi laborum rerum. Asperiores ducimus illum delectus fugiat aliquam mollitia quos inventore harum obcaecati iste, repellendus vel temporibus qui!</p>
+    <p>Lorem, ipsum dolor <a href="http://" target="_blank" rel="noopener noreferrer">sit amet</a> consectetur adipisicing elit. Inventore ipsa aspernatur quasi laborum rerum. Asperiores ducimus illum delectus fugiat aliquam mollitia quos inventore harum obcaecati iste, repellendus vel temporibus qui!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quo libero impedit inventore et, animi commodi fugit sed tempora, ipsum sit porro ipsam. Error, suscipit atque! Iusto ratione explicabo quidem?</p>
     <img src="foto.png" alt="Es una foto">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iure voluptatibus, exercitationem quam error ab quasi alias perspiciatis vero, architecto ducimus nesciunt, facilis quis qui labore aperiam reiciendis voluptates sit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iure voluptatibus, exercitationem quam error ab quasi alias perspiciatis vero, architecto <a href="http://" target="_blank" rel="noopener noreferrer">ducimus nesciunt</a>, facilis quis qui labore aperiam reiciendis voluptates sit!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae harum eveniet at nesciunt iure nihil odio, pariatur asperiores magnam, minus impedit quia suscipit aliquam? Temporibus fuga expedita nemo voluptas eum.</p>
     <table>
         <tr>
@@ -30,10 +41,10 @@
             <th>Imagenes</th>
         </tr>
         <tr>
-            <td>xxx</td>
-            <td>xxx</td>
-            <td>xxx</td>
-            <td>xxx</td>
+            <td id="enc"></td>
+            <td id="par"></td>
+            <td id="enl"></td>
+            <td id="img"></td>
         </tr>
     </table>
 </body>
