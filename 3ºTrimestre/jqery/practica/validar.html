@@ -47,10 +47,13 @@
                     $("#errorCorreo").text("Rellenar el campo correo");
                 }
                 else{
-                    if(!correo.test(patronEmail)){
-                    }
                     //El correo no es la cadena vacía
-                    $("#errorCorreo").text("");
+                    if(!patronEmail.test(correo)){
+                        //No encaja con el patrón Email
+                        $("#errorCorreo").text("Formato de correo no válido");
+                    }
+                    else
+                        $("#errorCorreo").text("");
                 }
             })
         });
