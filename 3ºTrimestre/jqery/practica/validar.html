@@ -15,11 +15,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <input type="text" placeholder="Nombre" id="nombre"><span id="errorNombre"></span><br>
-    <input type="text" placeholder="Apellidos" id="apellidos"><span id="errorApellidos"></span><br>
-    <input type="email" name="" id="correo" placeholder="Email"><span id="errorCorreo"></span><br>
+    <input type="text" placeholder="Nombre" id="nombre" required><span id="errorNombre"></span><br>
+    <input type="text" placeholder="Apellidos" id="apellidos" required><span id="errorApellidos"></span><br>
+    <input type="email" name="" id="correo" placeholder="Email"required><span id="errorCorreo"></span><br>
     <input type="date" name="" id="fnac"><br>
-    <input type="text" name="" id="dni" placeholder="DNI:12345678X"><br>
+    <input type="text" name="" id="dni" placeholder="DNI:12345678X" required><br>
     <input type="password" name="" id="password1" placeholder="Contraseña" required><br>
     <input type="password" name="" id="password2" placeholder="Repite la contraseña" required><br>
     <input type="checkbox" name="" id="privacidad" required><label for="">Acepta la política de privacidad</label><br>
@@ -37,7 +37,7 @@
                 else{
                     $("#errorNombre").text("");
                 }
-                if (nombre==""){
+                if (apellidos==""){
                     $("#errorApellidos").text("Rellenar el campo apellidos");
                 }
                 else{
@@ -52,8 +52,9 @@
                         //No encaja con el patrón Email
                         $("#errorCorreo").text("Formato de correo no válido");
                     }
-                    else
+                    else{
                         $("#errorCorreo").text("");
+                    }
                 }
             })
         });
