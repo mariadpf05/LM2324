@@ -19,8 +19,12 @@
     <button id="ocultar">Ocultar</button>
     <script>
         $(document).ready(function(){
-          $("p, h1").click(function(){
-            $(this).hide();
+          $("#aparecer").click(function(){
+            $("p, h1").show();
+          });
+
+          $("#ocultar").click(function(){
+            $("p, h1").hide();
           });
         });
         </script>
