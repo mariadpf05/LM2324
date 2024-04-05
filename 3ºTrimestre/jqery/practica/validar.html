@@ -50,7 +50,7 @@
                     //El correo no es la cadena vacía
                     if(!patronEmail.test(correo)){
                         //No encaja con el patrón Email
-                        $("#errorCorreo").text("Formato de correo no válido");
+                        $("#errorCorreo") .text("Formato de correo no válido");
                     }
                     else{
                         $("#errorCorreo").text("");
