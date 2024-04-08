@@ -10,5 +10,25 @@
     <!--En este ejercicio vamos a manipular las propiedades CSS de los elementos. Cambiamos el comportamiento 
     de los botones para que aparezcan las leyendas “Más grande” y “Menos grande”. El objetivo es que al pulsarlos
     el encabezado y los párrafos “pares” cambien su propiedad font-size.-->
+    <h1 id="encabezado">Encabezado 1</h1>
+    <p class="pares">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+    <p class="pares">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+    
+    <button id="aumentar">Más grande</button>
+    <button id="disminuir">Menos grande</button>
+    
+    <script>
+        $(document).ready(function(){
+            $("#aumentar").click(function(){
+                $("#encabezado, .pares").css("font-size", "+=2");
+            });
+
+            $("#disminuir").click(function(){
+                $("#encabezado, .pares").css("font-size", "-=2");
+            });
+        });
+    </script>
 </body>
 </html>
