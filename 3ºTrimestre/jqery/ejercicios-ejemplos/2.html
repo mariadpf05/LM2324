@@ -5,29 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 2 JQuery</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .pares {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <!--En base al ejercicio anterior vamos a identificar el encabezado mediante un id y los párrafos que ocupan 
     una posición par pertenecerán a la clase “pares”. Realiza las modificaciones pertinentes para que los botones 
     “Ocultar” y “Aparecer” utilicen los selectores convenientemente, para el encabezado su identificador y para los
     párrafos pares su clase de CSS.-->
-    <h1>Encabezado 1</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid veniam laborum eaque illo molestias nostrum nesciunt culpa tenetur veritatis reprehenderit ex accusantium necessitatibus hic cupiditate saepe, autem perspiciatis consequuntur!</p>
+    <h1 id="encabezado">Encabezado 1</h1>
+    <p class="pares">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid veniam laborum eaque illo molestias nostrum nesciunt culpa tenetur veritatis reprehenderit ex accusantium necessitatibus hic cupiditate saepe, autem perspiciatis consequuntur!</p>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis libero cum cumque omnis modi voluptatibus est voluptate excepturi laboriosam, enim accusantium distinctio voluptas eligendi ducimus, inventore fugiat, ratione vel ipsum!</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid veniam laborum eaque illo molestias nostrum nesciunt culpa tenetur veritatis reprehenderit ex accusantium necessitatibus hic cupiditate saepe, autem perspiciatis consequuntur!</p>
+    <p class="pares">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid veniam laborum eaque illo molestias nostrum nesciunt culpa tenetur veritatis reprehenderit ex accusantium necessitatibus hic cupiditate saepe, autem perspiciatis consequuntur!</p>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis libero cum cumque omnis modi voluptatibus est voluptate excepturi laboriosam, enim accusantium distinctio voluptas eligendi ducimus, inventore fugiat, ratione vel ipsum!</p>
     <button id="aparecer">Aparecer</button>
     <button id="ocultar">Ocultar</button>
     <script>
         $(document).ready(function(){
-          $("#aparecer").click(function(){
-            $("p, h1").show();
-          });
+            $("#aparecer").click(function(){
+                $("#encabezado, .pares").show();
+            });
 
-          $("#ocultar").click(function(){
-            $("p, h1").hide();
-          });
+            $("#ocultar").click(function(){
+                $("#encabezado, .pares").hide();
+            });
         });
-        </script>
+    </script>
 </body>
 </html>
