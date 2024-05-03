@@ -11,6 +11,7 @@
     <style>
         .ui-progressbar {
             position: relative;
+            width: 50%;
         }
 
         .progress-label {
@@ -32,7 +33,7 @@
                     progressLabel.text(progressbar.progressbar("value") + "%");
                 },
                 complete: function () {
-                    progressLabel.text("Complete!");
+                    progressLabel.text("Completado!");
                 }
             });
 
@@ -46,13 +47,14 @@
                 }
             }
 
-            setTimeout(progress, 2000);
+            setTimeout(progress, 8000);
         });
     </script>
 </head>
 <body>
+    <h1>Ejemplo de progressbar</h1>
     <div id="progressbar">
-        <div class="progress-label">Loading...</div>
+        <div class="progress-label">Cargando...</div>
     </div>
 </body>
 </html>
