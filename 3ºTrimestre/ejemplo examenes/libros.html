@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alexandria">
     <title>Visualizador libros</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!-- Aquí añadimos el código para poder trabajar con jQuery -->
     <style>
         body {
             font-family: 'Alexandria', sans-serif;
         }
-        h1{
+
+        h1 {
             font-size: xx-large;
             text-align: center;
             margin: 0 auto;
         }
+
         .contenedor {
             display: flex;
-            flex-wrap:wrap;
+            flex-wrap: wrap;
             flex-direction: column;
-           
+
         }
+
         .formulario {
             width: 80%;
             height: 100vh;
@@ -32,17 +37,21 @@
             border-radius: 10px;
             padding: 50px;
             box-shadow: 10px 10px 10px #7c7e8b;
-            overflow:auto;
+            overflow: auto;
         }
-        .formulario > * {
+
+        .formulario>* {
             margin: 10px;
             padding: 10px;
         }
-        input, label {
+
+        input,
+        label {
             font-size: 1.5em;
         }
+
         button {
-            background-color:#091661;
+            background-color: #091661;
             font-size: x-large;
             height: 60px;
             width: 25%;
@@ -51,7 +60,6 @@
             margin-left: 2%;
             margin-top: 1%;
         }
-       
     </style>
 </head>
 <body>
@@ -62,8 +70,8 @@
             <input type="number" name="codLibro" id="codLibro" min="1">
             <br>
             <label for="botones">Acción:</label>
-            <button id="btn-libro">Obtener libro</button>
-            <button id="btn-todos">Ver todos</button>
+            <button id="btn-libro">Consultar por ID libro</button>
+            <button id="btn-todos">Ver catálogo</button>
             <div id="resultados">
                 <!-- Aqui cargaremos los resultados-->
             </div>
@@ -71,6 +79,24 @@
     </div>
     <script>
         /* Aqui desarrollamos el código necesario */
+        $(document).ready(function () {
+            $("#btn-libro").click(function () {
+                let codlibro = $("#codlibro").val();
+                if (codlibro != "") {
+                    //El usuario había escrito algo
+                    $.get("https://gutendex.com/books" + codlibro).done(function (respuesta) {
+                        console.log(respuesta);
+                        $("#resultados").append("<p>"+respuesta.tittle+"</p>");
+                        $("#resultados").append("<p>"+respuesta.authors[0].name+"</p>")
+                        $("#resultados").append("<img src=''>"+respuesta.formats['image/jpeg']+"'>");
+                    }).fail(function () { })
+                }
+            });
+            $("#btn-todos").click(function () {
+
+            });
+        });
     </script>
 </body>
+
 </html>
