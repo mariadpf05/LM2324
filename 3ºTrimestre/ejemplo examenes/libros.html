@@ -87,6 +87,12 @@
                         let respuesta = new Object(r.results[i]);
                         let titulo = respuesta.title;
                         let autor = respuesta.authors.length == 0 ? "Anónimo" : respuesta.authors[0].name;
+                        /*if (respuesta.authors.length == 0){
+                            let autor = 'Amonimo'
+                        }
+                        else{
+                            let autor = respuesta.authors[0].name;
+                        }*/
                         let imagen = respuesta.formats['image/jpeg'];
                         let enlace = respuesta.formats['text/plain; charset=us-ascii'];
                         let numeroDescargas = respuesta.download_count;
