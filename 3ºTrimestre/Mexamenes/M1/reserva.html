@@ -85,9 +85,9 @@
             $("#f_salida").datepicker({ minDate: 2, maxDate: "+1Y+1D" });
             $("#calculo").click(function (e) { 
                 e.preventDefault();
-                let i = $("#num_individuales").val();
-                let d = $("#num_dobles").val();
-                let t = $("#num_triples").val();
+                let i = $("#num_individuales").val(); //hab individuales
+                let d = $("#num_dobles").val(); //hab dobles
+                let t = $("#num_triples").val(); //hab triples
                 let desde = $("#f_entrada").datepicker('getDate');
                 let hasta = $("#f_salida").datepicker('getDate');
                 let diff = new Date(hasta - desde);
