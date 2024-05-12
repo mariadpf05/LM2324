@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar fotos por texto</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Buscar fotos por texto</h1>
+    <label for="">¿Qué foto buscas?</label>
+    <input id="texto" type="text"><br><br>
+    <button id="btn">Buscar</button>
+    <p id="resultado"></p>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                let texto = $("#texto").val()
+                let url = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=b2538fcb92f44c7cc75c16d348df237a&text=" + texto + "&format=json&nojsoncallback=1"
+                $.get(url).done(function (datos) {
+                    $("#resultado").empty()
+                    for (var i = 0; i < datos.photos.photo.length; i++) {
+                        let farm = datos.photos.photo[i].farm;
+                        let server = datos.photos.photo[i].server;
+                        let id = datos.photos.photo[i].id;
+                        let secret = datos.photos.photo[i].secret;
+                        let foto = "https://live.staticflickr.com/" + server + "/" + id + "_" + secret + ".jpg";
+                        $("#resultado").append('<p>' + '<img src="' + foto + '"></p>');
+                    }
+                }).fail(function () {
+                    $("#resultado").text("Error en el servidor")
+                });
+            });
+        });
+
+    </script>
+</body>
+
+
+</html>

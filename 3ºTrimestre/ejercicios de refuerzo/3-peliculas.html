@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de peliculas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Buscador de peliculas</h1>
+    <p>¡¡¡Introduzca el título en inglés!!!</p>
+    <label for="">Escribe una película</label>
+    <input id="pelicula" type="text"><br><br>
+    <button id="btn">Buscar</button>
+    <p id="resultado"></p>
+    <p id="foto"></p>
+    <script>
+        //Guardians of the Galaxy Vol. 2
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#resultado").empty()
+                let peli = $("#pelicula").val()
+                let url = "http://www.omdbapi.com/?apikey=1a82ddd&t=" + peli
+
+                $.get(url).done(function (datos) {
+                    let imagen = datos.Poster
+                    let titulo = datos.Title
+                    let estreno = datos.Released
+                    let actores = datos.Actors
+                    $("#resultado").append(titulo + "<br>");
+                    $("#resultado").append("Se estrenó el " + estreno + "<br>");
+                    $("#resultado").append("Los actores principales son " + actores + "<br>");
+                    $("#resultado").append('<p>' + '<img src="' + imagen + '"></p>');
+                }).fail(function () {
+                    $("#resultado").text("Error en el servidor o película no valida")
+                })
+            })
+        });
+    </script>
+</body>
+</html>

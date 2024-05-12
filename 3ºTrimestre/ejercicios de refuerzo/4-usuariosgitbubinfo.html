@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion sobre usuarios Github</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Buscador de usuarios Github</h1>
+    <label for="">Buscar usuario</label>
+    <input id="user" type="text"><br><br>
+    <button id="btn">Buscar</button>
+    <p id="resultado"></p>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#resultado").empty()
+                let usuario = $("#user").val()
+                let url = "https://api.github.com/users/" + usuario
+                $.get(url).done(function (datos) {
+                    let imagen = datos.avatar_url
+                    let login = datos.login
+                    let publicos = datos.public_repos
+                    $("#resultado").append('<p>' + '<img src="' + imagen + '"></p>');
+                    $("#resultado").append("Nombre: " + login + "<br>");
+                    $("#resultado").append("Repositorios públicos " + publicos);
+                }).fail(function () {
+                    $("#resultado").text("Inserte un usuario existente")
+                })
+            })
+        });
+    </script>
+</body>
+</html>
