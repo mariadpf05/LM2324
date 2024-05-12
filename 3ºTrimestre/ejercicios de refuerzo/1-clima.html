@@ -1,33 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Clima de una ciudad especifica</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refuerzo 1</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
-  <body>
-    <h1>Consumiento datos de la API de openweathermap</h1>
-    <div class="container">
-        <p id="objetivo"></p>
-    </div>
+<body>
+    <h1>Temperatura en cualquier ciudad</h1>
+    <input id="city" type="text" placeholder="Introduce una ciudad"><br><br>
+    <button id="btn">Confirmar</button>
+    <p id="resultado"></p>
     <script>
-        /* Completar el código jQuery aquí */
-        $(document).ready(function(){
-          let apikey = "bfa2503e54b8a831b0b718b1780da9be"; //Mi api key
-          let url = "https://api.openweathermap.org/data/2.5/weather?"
-          let latitud = "37.38283"
-          let longitud="-5.97317"
-          let url_completa = url + "lat="+latitud+"&lon="+longitud+"&units=metric&appid="+apikey; //URL completa
-          $.get(url_completa).done(function(datos){
-            console.log(datos.main.temp);
-            $("#objetivo").text("La temperatura en Sevilla e de"+datos.main.temp+"ºC")
-          }).fail(function(){
-            $("objetivo").text("Ha ocurrido in error en la llamada del servidor")
-          });
+        $(document).ready(function () {
+            $("#btn").click(function () {
+
+                let ciudad = $("#city").val()
+                let url = "https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "&appid=f76b550504eedf9737d3e888a3cbc8fc&units=metric"
+
+                $.get(url).done(function (datos) {
+                    let temperatura = datos.main.temp
+                    $("#resultado").text("La temperatura en " + ciudad + " es de " + temperatura + "ºC")
+                }).fail(function () {
+                    $("#resultado").text("Error en el servidor o ciudad no valida")
+                })
+            })
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

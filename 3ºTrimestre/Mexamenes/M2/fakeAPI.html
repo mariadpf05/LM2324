@@ -84,7 +84,41 @@
         </div>
     </div>
     <script>
-        
+        $(document).ready(function () {
+            $("#btn-todos").click(function (e) {
+                e.preventDefault();
+                $.get("https://fakestoreapi.com/products").done(function (r) {
+                    $("#resultados").empty();
+                    r.forEach(function(producto) {
+                        $("#resultados").append(
+                            '<div>' +
+                                '<img src="' + producto.image + '" alt="' + producto.title + '" style="width: 120px;">' +
+                                '<p>Título: ' + producto.title + '</p>' +
+                                '<p>Descripción: ' + producto.description + '</p>' +
+                                '<p>Precio: ' + producto.price + '</p>' +
+                            '</div>'
+                        );
+                    });
+                });
+            });
+
+            $("#btn-producto").click(function () {
+                let codigo = $("#codProducto").val();
+                $.get("https://fakestoreapi.com/products/" + codigo).done(function (producto) {
+                    $("#resultados").empty();
+                    $("#resultados").append(
+                        '<div>' +
+                            '<img src="' + producto.image + '" alt="' + producto.title + '" style="width: 120px;">' +
+                            '<p>Título: ' + producto.title + '</p>' +
+                            '<p>Descripción: ' + producto.description + '</p>' +
+                            '<p>Precio: ' + producto.price + '</p>' +
+                        '</div>'
+                    );
+                }).fail(function () {
+                    alert("Error en este producto");
+                });
+            });
+        });
     </script>
 </body>
 
