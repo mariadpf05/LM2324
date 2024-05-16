@@ -95,7 +95,6 @@
                 <option value="12:30 - 13:30">12:30 - 13:30</option>
                 <option value="13:30 - 14:00">13:30 - 14:00</option>
                 <!-- Código a completar-->
-
             </select>
             <br>
             <button id="reserva">Reserva</button>
@@ -104,30 +103,90 @@
             <p id="totalPortatiles">Nº Portátiles: </p>
         </form>
     </div>
-    
     <!-- Código a completar-->
     <script>
-        $.datepicker.regional['es'] = {
-            closeText: 'Cerrar',
-            prevText: '<Ant',
-            nextText: 'Sig>',
-            currentText: 'Hoy',
-            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-            monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-            dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
-            dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
-            weekHeader: 'Sm',
-            dateFormat: 'dd/mm/yy',
-            firstDay: 1,
-            isRTL: false,
-            showMonthAfterYear: false,
-            yearSuffix: ''
-        };
-        $.datepicker.setDefaults($.datepicker.regional['es']);
         $(document).ready(function () {
-            $("#fecha").datepicker({ minDate: 1, maxDate: "+2W"});
+            $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '<Ant',
+                nextText: 'Sig>',
+                currentText: 'Hoy',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+                dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+            };
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+            $(document).ready(function () {
+                $("#fecha").datepicker({ minDate: 1, maxDate: "+2W", beforeShowDay: $.datepicker.noWeekends });
+            });
+            $(function () {
+                $(".carrito").checkboxradio();
+            });
+            $("#reserva").click(function () {
+                event.preventDefault();
+                $("#diaReserva").empty();
+
+                if ($("#fecha").val() == '') {
+                    alert("¡Error! Debe seleccionar una fecha de reserva");
+                } else {
+
+                    let hora = $("#hora").val()
+                    let dia = $("#fecha").val()
+                    let nportatiles = 0
+                    $("#diaReserva").append("Reserva el " + dia + " de " + hora);
+                    let ncarritos = $("input:checkbox:checked").length;
+                    $(".carrito").each(function () {
+                        if ($(this).is(":checked")) {
+                            nportatiles += 15;
+                        }
+                    });
+                    /*let c1 = $("#checkbox-1").is(":checked")
+
+                    if (c1) {
+                        nportatiles += 15;
+                    }
+                    let c2 = $("#checkbox-2").is(":checked")
+
+                    if (c2) {
+                        nportatiles += 15;
+                    }
+
+                    let c3 = $("#checkbox-3").is(":checked")
+
+                    if (c3) {
+                        nportatiles += 15;
+                    }
+
+                    let c4 = $("#checkbox-4").is(":checked")
+
+                    if (c4) {
+                        nportatiles += 15;
+                    }
+
+                    let c5 = $("#checkbox-5").is(":checked")
+
+                    if (c5) {
+                        nportatiles += 15;
+                    }
+
+                    let c6 = $("#checkbox-6").is(":checked")
+
+                    if (c6) {
+                        nportatiles += 15;
+                    }*/
+                    $("#totalPortatiles").text("Nº Portátiles: " + nportatiles);
+                }
+            });
         });
     </script>
-    </body>
+</body>
+
 </html>
